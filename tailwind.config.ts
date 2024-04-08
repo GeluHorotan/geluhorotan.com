@@ -8,7 +8,13 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  theme: {},
+  theme: {
+    extend: {
+      maxWidth: {
+        '8xl': '87.5rem',
+      },
+    },
+  },
   plugins: [
     createThemes({
       dark: {
