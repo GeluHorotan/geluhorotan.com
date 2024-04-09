@@ -1,3 +1,4 @@
+'use client';
 import { Menu, Moon, Shield } from 'lucide-react';
 
 export function Header() {
@@ -15,7 +16,7 @@ export function Header() {
         <Moon size={30}></Moon>
       </div>
       <div className="md:hidden bg-accent flex items-center p-4  max-md:mt-4  rounded-xl text-surface z-20">
-        <Menu />
+        <Menu size={30} />
       </div>
       <div className=" z-10 md:hidden bg-red-400/100 absolute m-4 rounded-xl inset-0"></div>
     </div>
