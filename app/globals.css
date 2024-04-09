@@ -10,7 +10,7 @@
 
 @layer base {
   body {
-    @apply bg-surface text-foreground;
+    @apply bg-primary text-secondary;
   }
   h1 {
     @apply text-5xl font-bold leading-normal;

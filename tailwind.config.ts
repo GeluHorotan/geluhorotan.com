@@ -18,15 +18,13 @@ const config: Config = {
   plugins: [
     createThemes({
       dark: {
-        surface: '#1A1D21',
-        foreground: '#F7F3F4',
-
+        primary: '#1A1D21',
+        secondary: '#F7F3F4',
         accent: '#578EF8',
       },
       light: {
-        surface: '#F7F3F4',
-        foreground: '#1A1D21',
-
+        primary: '#F7F3F4',
+        secondary: '#1A1D21',
         accent: '#125AE1',
       },
     }),
