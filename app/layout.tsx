@@ -20,9 +20,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="light">
       <body className={poppins.className}>
-        <main className="flex flex-col items-center justify-center">
+        <main className="flex flex-col items-center justify-center px-4">
           <Header />
           {children}
         </main>
