@@ -1,7 +1,6 @@
 'use client';
-
-// Locale
-import nav_locale from '@locale/nav_locale.json';
+import { useState } from 'react';
+import { ThemeSwitcher } from '@components/ThemeSwitcher';
 
 import {
   Navbar,
@@ -14,8 +13,9 @@ import {
   Divider,
 } from '@nextui-org/react';
 import Link from 'next/link';
-import { useState } from 'react';
-import { ThemeSwitcher } from '@components/theme/theme-switcher';
+
+// Locale
+import nav_locale from '@locale/nav_locale.json';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,7 +36,7 @@ export function Header() {
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
         />
       </NavbarContent>
-      <NavbarContent className="max-sm:!flex-grow-0">
+      <NavbarContent className="max-sm:!flex-grow-0 ">
         <NavbarBrand className="sm:justify-start justify-center  flex-grow-0">
           G
         </NavbarBrand>
