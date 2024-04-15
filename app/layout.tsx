@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={poppins.className}>
         <Providers>
-          <main className="flex flex-col items-center justify-center px-4 bg-background text-foreground ">
+          <main className="flex flex-col items-center justify-center  bg-background text-foreground ">
             <Header />
             {children}
           </main>
