@@ -1,5 +1,4 @@
 'use client';
-import { Moon } from 'lucide-react';
 
 // Locale
 import nav_locale from '@locale/nav_locale.json';
@@ -16,6 +15,7 @@ import {
 } from '@nextui-org/react';
 import Link from 'next/link';
 import { useState } from 'react';
+import { ThemeSwitcher } from '@components/theme/theme-switcher';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -52,7 +52,7 @@ export function Header() {
         ))}
       </NavbarContent>
       <NavbarContent justify="end">
-        <Moon size={20} />
+        <ThemeSwitcher></ThemeSwitcher>
       </NavbarContent>
 
       {/* Sidebar content */}
