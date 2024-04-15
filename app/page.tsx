@@ -1,11 +1,18 @@
-import Image from 'next/image';
-
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
-      <div className="w-1/2">
-        <h1>TEST testtest dsafs fdsf dsf dsf sasdfas sad asd asdsa</h1>
+    <div className="w-full bg-red-400">
+      <div className="w-full h-screen bg-blue-200  flex items-center justify-center text-5xl font-bold">
+        1
       </div>
-    </main>
+      <div className="w-full h-screen bg-blue-300 flex items-center justify-center text-5xl font-bold">
+        2
+      </div>
+      <div className="w-full h-screen bg-blue-400 flex items-center justify-center text-5xl font-bold">
+        3
+      </div>
+      <div className="w-full h-screen bg-blue-500 flex items-center justify-center text-5xl font-bold">
+        4
+      </div>
+    </div>
   );
 }
