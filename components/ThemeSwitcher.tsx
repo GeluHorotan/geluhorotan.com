@@ -1,8 +1,11 @@
 'use client';
 
-import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
+
+// SVG
+import { Sun } from '@components/svgs/Sun';
+import { Moon } from '@components/svgs/Moon';
 
 export function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false);
@@ -18,11 +21,11 @@ export function ThemeSwitcher() {
     <div>
       {theme === 'dark' ? (
         <button onClick={() => setTheme('light')}>
-          <Sun />
+          <Sun className="fill-foreground" />
         </button>
       ) : (
         <button onClick={() => setTheme('dark')}>
-          <Moon />
+          <Moon className="fill-foreground" />
         </button>
       )}
     </div>

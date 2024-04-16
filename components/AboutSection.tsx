@@ -1,23 +1,27 @@
 import Image from 'next/image';
-import { Icon } from '@components/svgs/Icon';
+import { Grid } from '@components/svgs/Grid';
+import { Bulb } from '@components/svgs/Bulb';
 
 export function AboutSection() {
   return (
-    <div className="w-full h-screen max-w-8xl  flex items-center justify-center text-5xl font-bold">
+    <div className="w-full  max-w-8xl  flex items-center justify-center text-5xl font-bold">
       <div className="flex flex-col items-center justify-center gap-20 w-full">
         <div className="flex gap-4 flex-col items-center justify-center w-1/2  text-center">
-          <h2 className="w-1/2">You&apos;re in safe hands</h2>
+          <h2 className="w-1/2">
+            You&apos;re in <br />{' '}
+            <span className="text-primary">safe hands</span>
+          </h2>
           <p className="w-1/2">
             Your trust is paramount, and I&apos;m committed to delivering
             results that exceed your expectations.
           </p>
         </div>
         {/* ---------- */}
-        <div className="flex items-center justify-between  w-full">
-          <div className="flex flex-col gap-8 w-[40%]">
+        <div className="flex items-center justify-between   w-full ">
+          <div className="flex flex-col gap-8 w-[35%] ">
             <div className="flex flex-col gap-4">
               <div className="p-2 bg-primary rounded-xl w-max">
-                <Icon identifier="grid" className="fill-background" size={24} />
+                <Grid className="fill-background" size={24} />
               </div>
               <h6>Real-World Applications</h6>
               <p>
@@ -28,7 +32,7 @@ export function AboutSection() {
             </div>
             <div className="flex flex-col gap-4">
               <div className="p-2 bg-primary rounded-xl w-max">
-                <Icon identifier="bulb" className="fill-background" size={24} />
+                <Bulb className="fill-background" size={24} />
               </div>
               <h6>Embracing Complex Challenges</h6>
               <p>
@@ -38,7 +42,8 @@ export function AboutSection() {
               </p>
             </div>
           </div>
-          <Image src="/gitted.png" width={864} height={576} alt="test2"></Image>
+
+          <Image src="/gitted.png" width={864} height={576} alt="test2" />
         </div>
       </div>
     </div>
