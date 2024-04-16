@@ -3,7 +3,7 @@ import { Button } from '@components/ui/Button';
 
 export function HeroSection() {
   return (
-    <div className="w-full h-screen  flex items-center justify-between gap-40 text-5xl font-bold">
+    <section className="w-full h-screen  flex items-center justify-between gap-40 text-5xl font-bold">
       <div className="w-1/2    flex flex-col gap-14">
         <div className="flex flex-col gap-8">
           <h1>Build apps that are efficient and scale</h1>
@@ -19,6 +19,6 @@ export function HeroSection() {
         </div>
       </div>
       <FloatingPhone />
-    </div>
+    </section>
   );
 }
