@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { Icon } from '@components/svgs/Icon';
 
 export function AboutSection() {
   return (
@@ -15,7 +16,9 @@ export function AboutSection() {
         <div className="flex items-center justify-between  w-full">
           <div className="flex flex-col gap-8 w-[40%]">
             <div className="flex flex-col gap-4">
-              <div>T</div>
+              <div className="p-2 bg-primary rounded-xl w-max">
+                <Icon identifier="grid" className="fill-background" size={24} />
+              </div>
               <h6>Real-World Applications</h6>
               <p>
                 Emphasizing user-centric design, my experience entails crafting
@@ -24,11 +27,14 @@ export function AboutSection() {
               </p>
             </div>
             <div className="flex flex-col gap-4">
-              <h6>Real-World Applications</h6>
+              <div className="p-2 bg-primary rounded-xl w-max">
+                <Icon identifier="bulb" className="fill-background" size={24} />
+              </div>
+              <h6>Embracing Complex Challenges</h6>
               <p>
-                Emphasizing user-centric design, my experience entails crafting
-                applications tailored to various user demographics, prioritizing
-                both performance and accessibility.
+                Embracing challenges as opportunities for growth and innovation,
+                I tackle complex problems by applying strategic thinking and
+                creativity, overcoming obstacles along the way.
               </p>
             </div>
           </div>
