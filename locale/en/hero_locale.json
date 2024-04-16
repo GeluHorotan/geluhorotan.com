@@ -1,0 +1,16 @@
+{
+  "header": "Build apps that are efficient and scale",
+  "subHeader": "As a frontend developer, I specialised in building apps that are efficient and scales, with technologies like React,Next.js, Typescript, Redux and Tailwind.css",
+  "cta": [
+    {
+      "id": 1,
+      "name": "projects",
+      "isPrimary": true
+    },
+    {
+      "id": 2,
+      "name": "contact",
+      "isPrimary": false
+    }
+  ]
+}

@@ -15,7 +15,7 @@ import {
 import Link from 'next/link';
 
 // Locale
-import nav_locale from '@locale/nav_locale.json';
+import nav_locale from '@locale/en/nav_locale.json';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,7 +38,7 @@ export function Header() {
       </NavbarContent>
       <NavbarContent className="max-sm:!flex-grow-0 ">
         <NavbarBrand className="sm:justify-start justify-center  flex-grow-0">
-          G
+          <h2>G</h2>
         </NavbarBrand>
       </NavbarContent>
 
