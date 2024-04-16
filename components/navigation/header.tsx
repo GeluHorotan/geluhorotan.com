@@ -24,7 +24,7 @@ export function Header() {
   return (
     <Navbar
       isBlurred={false}
-      className=" max-w-8xl px-4 justify-between  "
+      className=" max-w-8xl px-0 justify-between  "
       classNames={{
         base: ' w-full',
         wrapper: ' px-0 w-full max-w-8xl',
