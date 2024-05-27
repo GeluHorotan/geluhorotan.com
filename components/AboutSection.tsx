@@ -435,6 +435,7 @@ export function AboutSection() {
           <div className="w-[600px]  h-[600px] flex items-end justify-end ">
             <World data={sampleArcs} globeConfig={globeConfig} />
           </div>
+          {/* TEST */}
           {/* <Image src="/gitted.png" width={864} height={576} alt="test2" /> */}
         </div>
       </div>
