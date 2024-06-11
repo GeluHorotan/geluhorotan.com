@@ -1,4 +1,4 @@
-import { WorldWrapper } from '@components/globe/WorldWrapper';
+import { WorldWrapper } from '@components/aceternity-ui/WorldWrapper';
 import about_locale from '@locale/en/about_locale.json';
 import SvgFinder from './svgs/SvgFinder';
 

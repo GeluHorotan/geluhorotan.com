@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic';
 
 const World = dynamic(
-  () => import('@components/globe/Globe').then((m) => m.World),
+  () => import('@components/aceternity-ui/Globe').then((m) => m.World),
   {
     ssr: false,
   }
