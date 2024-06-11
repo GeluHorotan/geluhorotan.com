@@ -24,10 +24,10 @@ export function Header() {
   return (
     <Navbar
       isBlurred={false}
-      className=" max-w-8xl px-0 justify-between  "
+      className=" w-full bg-background px-0 justify-between  "
       classNames={{
-        base: ' w-full',
-        wrapper: ' px-0 w-full max-w-8xl',
+        base: ' w-full ',
+        wrapper: 'px-0 max-w-8xl  mx-auto',
       }}
       onMenuOpenChange={setIsMenuOpen}
     >
