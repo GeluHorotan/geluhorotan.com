@@ -17,8 +17,8 @@ export function AboutSection() {
           </p>
         </div>
         {/* ---------- */}
-        <div className="flex items-center justify-between   w-full ">
-          <div className="flex flex-col gap-14 w-[35%] ">
+        <div className="flex items-center justify-between w-full ">
+          <div className="flex flex-col gap-14 w-[40%] ">
             <div className="flex flex-col gap-4">
               <div className="p-2 bg-primary rounded-xl w-max">
                 <Grid className="fill-background" size={24} />
@@ -42,11 +42,16 @@ export function AboutSection() {
               </p>
             </div>
           </div>
-          <div className="w-[600px]  h-max   flex items-end justify-end ">
+          <div className=" h-[40rem] w-[50%]  flex items-center justify-end ">
+            {/* <Image
+              src="/chronicles.webp"
+              width={1280}
+              height={720}
+              alt="TEST"
+              className=" h-full object-contain  rounded-2xl "
+            /> */}
             <WorldWrapper />
           </div>
-
-          {/* <Image src="/gitted.png" width={864} height={576} alt="test2" /> */}
         </div>
       </div>
     </div>
