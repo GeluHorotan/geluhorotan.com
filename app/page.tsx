@@ -1,12 +1,12 @@
-import { AboutSection } from '@components/AboutSection';
-import { HeroSection } from '@components/HeroSection';
+import { About } from '@components/About';
+import { Hero } from '@components/Hero';
 
 export default function Home() {
   return (
     <div className="w-full max-w-8xl ">
-      <HeroSection />
+      <Hero />
       <div className="w-full flex flex-col gap-36">
-        <AboutSection />
+        <About />
         <div className="w-full h-screen bg-blue-400 flex items-center justify-center text-5xl font-bold">
           3
         </div>

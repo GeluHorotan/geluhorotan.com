@@ -2,7 +2,7 @@ import { FloatingPhone } from './FloatingPhone';
 import { Button } from '@components/ui/Button';
 import { FlipWords } from './aceternity-ui/FlipWords';
 
-export function HeroSection() {
+export function Hero() {
   const words = ['scale', 'grow', 'adapt', 'expand'];
   return (
     <section className="w-full h-screen  flex items-center justify-between gap-40 text-5xl font-bold">

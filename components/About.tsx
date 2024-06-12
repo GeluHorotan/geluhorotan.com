@@ -2,7 +2,7 @@ import { WorldWrapper } from '@components/aceternity-ui/WorldWrapper';
 import about_locale from '@locale/en/about_locale.json';
 import SvgFinder from './svgs/SvgFinder';
 
-export function AboutSection() {
+export function About() {
   const { about_list } = about_locale;
   return (
     <div className="w-full  max-w-8xl  flex items-center justify-center text-5xl font-bold">
@@ -35,7 +35,7 @@ export function AboutSection() {
             ))}
           </div>
           <div className=" h-[40rem] w-[50%]  flex items-center justify-end ">
-            <WorldWrapper />
+            {/* <WorldWrapper /> */}
           </div>
         </div>
       </div>
