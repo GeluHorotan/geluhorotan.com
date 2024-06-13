@@ -1,8 +1,5 @@
 import { directus } from '@lib/directus';
-
-const GET_PROJECTS_QUERY = `query {project(
-  sort: ["-date_created"]
-)  { name,id, body, contributors {role, contributor_id {name}} technologies {technology_id {name, identifier}}}}`;
+import { GET_PROJECTS_QUERY } from '@api/queries';
 
 export async function getProjects() {
   try {

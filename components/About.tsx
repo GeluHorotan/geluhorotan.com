@@ -4,7 +4,7 @@ import SvgFinder from './svgs/SvgFinder';
 export function About() {
   const { about_list } = about_locale;
   return (
-    <div className="w-full  max-w-8xl  flex items-center justify-center text-5xl font-bold">
+    <section className="w-full  max-w-8xl  flex items-center justify-center text-5xl font-bold self-center ">
       <div className="flex flex-col items-center justify-center gap-20 w-full">
         <div className="flex gap-4 flex-col items-center justify-center w-1/2  text-center">
           <h2 className="w-1/2">
@@ -38,6 +38,6 @@ export function About() {
           </div> */}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
