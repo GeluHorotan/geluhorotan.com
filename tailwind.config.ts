@@ -14,6 +14,11 @@ const config: Config = {
       maxWidth: {
         '8xl': '87.5rem',
       },
+      colors: {
+        released: 'var(--color-released)',
+        mvp: 'var(--color-mvp)',
+        development: 'var(--color-development)',
+      },
     },
   },
   plugins: [

@@ -9,6 +9,17 @@
 }
 
 @layer base {
+  :root {
+    --color-released: #f20c3a;
+    --color-mvp: #0c68f2;
+    --color-development: #0cf249;
+  }
+  :root[class~='dark'] {
+    --color-released: #f85778;
+    --color-mvp: #5797f8;
+    --color-development: #57f882;
+  }
+
   body {
     @apply bg-primary text-secondary;
   }

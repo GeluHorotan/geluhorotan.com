@@ -1,24 +1,92 @@
-export interface IProject {
-  name: string;
+import Image from 'next/image';
+import { MeshGradient } from './svgs/MeshGradient';
+import { Stage } from './Stage';
+import { Technologies } from './Technologies';
+import { IContributor } from '@customTypes/Project';
+
+interface IProject {
+  project: any;
   isReversed: boolean;
 }
 
-interface IStyles {
+interface IOrientation {
   normal: string;
   reversed: string;
 }
 
-export function Project({ name, isReversed }: IProject) {
-  const activeStyle: keyof IStyles = isReversed ? 'reversed' : 'normal';
+interface IStyles {
+  container: IOrientation;
+  infoContainer: IOrientation;
+  imageContainer: IOrientation;
+  imageBorderRadius: IOrientation;
+}
+
+export function Project({ project, isReversed }: IProject) {
+  const {
+    image,
+    stage,
+    name,
+    description,
+    technologies,
+    contributors,
+    // url,
+    // slug,
+  } = project;
+  const orientation: 'normal' | 'reversed' = isReversed ? 'reversed' : 'normal';
 
   const styles: IStyles = {
-    normal: 'self-start',
-    reversed: 'self-end',
+    container: {
+      normal: 'flex-row',
+      reversed: 'flex-row-reverse',
+    },
+    infoContainer: {
+      normal: 'pr-[260px]',
+      reversed: 'pl-[260px]',
+    },
+    imageContainer: {
+      normal: 'pr-14',
+      reversed: 'pl-14',
+    },
+    imageBorderRadius: {
+      normal: 'rounded-tr-xl rounded-br-xl',
+      reversed: 'rounded-bl-xl rounded-tl-xl',
+    },
   };
 
   return (
-    <div className={`bg-red-400 w-full max-w-8xl ${styles[activeStyle]}`}>
-      {name}
+    <div
+      className={` w-full flex items-center gap-20   ${styles.container[orientation]}`}
+    >
+      <div className="w-1/2 h-full relative ">
+        <div
+          className={`absolute top-0 right-0 w-full h-full ${styles.imageContainer[orientation]} py-14`}
+        >
+          <Image
+            src={`${process.env.ASSETS_URL}/${image.id}`}
+            width={1980}
+            height={1024}
+            alt="test"
+            className={` w-full h-full object-cover    ${styles.imageBorderRadius[orientation]}`}
+          />
+        </div>
+
+        <MeshGradient className={styles.imageBorderRadius[orientation]} />
+      </div>
+      <div
+        className={`w-1/2 h-full  ${styles.infoContainer[orientation]} flex flex-col gap-14`}
+      >
+        <div className="flex flex-col gap-4">
+          <Stage stage={stage} />
+          <h4> {name}</h4>
+          <h6>{description}</h6>
+        </div>
+        <Technologies technologies={technologies} />
+        <div>
+          {contributors.map((contributor: IContributor) => {
+            return <div key={contributor.id}>{contributor.name}</div>;
+          })}
+        </div>
+      </div>
     </div>
   );
 }
