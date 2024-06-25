@@ -9,6 +9,10 @@ const nextConfig = {
         port: '8055',
         pathname: '/assets/*',
       },
+      {
+        hostname: 'api.microlink.io',
+        protocol: 'https',
+      },
     ],
   },
 };
