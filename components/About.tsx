@@ -1,11 +1,11 @@
-import { WorldWrapper } from '@components/aceternity-ui/WorldWrapper';
 import about_locale from '@locale/en/about_locale.json';
 import SvgFinder from './svgs/SvgFinder';
+import Image from 'next/image';
 
-export function AboutSection() {
+export function About() {
   const { about_list } = about_locale;
   return (
-    <div className="w-full  max-w-8xl  flex items-center justify-center text-5xl font-bold">
+    <section className="w-full  max-w-8xl  flex items-center justify-center text-5xl font-bold self-center ">
       <div className="flex flex-col items-center justify-center gap-20 w-full">
         <div className="flex gap-4 flex-col items-center justify-center w-1/2  text-center">
           <h2 className="w-1/2">
@@ -19,7 +19,7 @@ export function AboutSection() {
         </div>
 
         <div className="flex items-center justify-between w-full ">
-          <div className="flex flex-col gap-14 w-[40%] ">
+          <div className="flex flex-col gap-14 w-[45%] ">
             {about_list?.map((item, i) => (
               <div key={i} className="flex flex-col gap-4">
                 <div className="p-2 bg-primary rounded-xl w-max">
@@ -34,11 +34,19 @@ export function AboutSection() {
               </div>
             ))}
           </div>
-          <div className=" h-[40rem] w-[50%]  flex items-center justify-end ">
-            <WorldWrapper />
+          <div className="  w-1/2   flex items-center justify-end ">
+            <Image
+              src={
+                'https://api.microlink.io/?url=https%3A%2F%2Frehabsportstherapy.co.uk&overlay.browser=dark&screenshot=true&embed=screenshot.url'
+              }
+              alt="The Sinners Project"
+              width={1280}
+              height={720}
+              className=" rounded-xl"
+            />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
