@@ -10,6 +10,7 @@ export function Contact() {
       >
         <div className="flex flex-col gap-2">
           <label htmlFor="name">Full Name</label>
+
           <input id="name" name="full_name" required />
         </div>
         <div className="flex flex-col gap-2">
