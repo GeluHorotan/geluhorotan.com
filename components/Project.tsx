@@ -3,6 +3,8 @@ import { MeshGradient } from '@components/svgs/MeshGradient';
 import { Stage } from '@components/Stage';
 import { Technologies } from '@components/Technologies';
 import { Contributors } from '@components/Contributors';
+import { Button } from './ui/Button';
+import Link from 'next/link';
 
 interface IProject {
   project: any;
@@ -29,8 +31,8 @@ export function Project({ project, isReversed }: IProject) {
     description,
     technologies,
     contributors,
-    // url,
-    // slug,
+    url,
+    slug,
   } = project;
   const orientation: 'normal' | 'reversed' = isReversed ? 'reversed' : 'normal';
 
@@ -73,7 +75,7 @@ export function Project({ project, isReversed }: IProject) {
         <MeshGradient className={styles.imageBorderRadius[orientation]} />
       </div>
       <div
-        className={`w-1/2 h-full  ${styles.infoContainer[orientation]} flex flex-col gap-14`}
+        className={`w-1/2 h-full   ${styles.infoContainer[orientation]} flex flex-col gap-14`}
       >
         <div className="flex flex-col gap-4">
           <Stage stage={stage} />
@@ -82,6 +84,14 @@ export function Project({ project, isReversed }: IProject) {
         </div>
         <Technologies technologies={technologies} />
         <Contributors contributors={contributors}></Contributors>
+        <div className="w-full flex gap-4">
+          <Link href={url} className="w-full" target="_blank">
+            <Button className="w-full">VISIT</Button>
+          </Link>
+          <Button className="w-full" variant={'outline'}>
+            LEARN MORE
+          </Button>
+        </div>
       </div>
     </div>
   );

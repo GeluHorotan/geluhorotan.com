@@ -16,7 +16,7 @@ export function Contributor({ avatar, name, role }: IContributor) {
         height={128}
         className="rounded-full w-12 h-12 object-cover"
       />
-      <div className="flex flex-col gap-0">
+      <div className="flex flex-col gap-0 ">
         <div className="font-medium">{name}</div>
         <div className="text-base font-light">{role}</div>
       </div>

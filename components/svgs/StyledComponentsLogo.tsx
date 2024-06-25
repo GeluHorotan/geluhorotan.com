@@ -14,9 +14,9 @@ export function StyledComponentsLogo({ size = 24, className }: IIconProps) {
         id="_"
         data-name="💅"
         transform="translate(0 13)"
-        font-size="12"
-        font-family="SegoeUIEmoji, Segoe UI Emoji"
-        letter-spacing="0.005em"
+        fontSize="12"
+        fontFamily="SegoeUIEmoji, Segoe UI Emoji"
+        letterSpacing="0.005em"
       >
         <tspan x="0" y="0">
           💅
