@@ -16,12 +16,15 @@ export async function getProjects() {
       project.technologies.forEach((item: ITechnology) => {
         (item as ITechnology).id = item.technology_id!.id;
         (item as ITechnology).name = item.technology_id!.name;
+        (item as ITechnology).identifier = item.technology_id!.identifier;
         delete (item as ITechnology).technology_id;
       });
 
       project.contributors.forEach((item: IContributor) => {
         (item as IContributor).id = item.contributor_id!.id;
         (item as IContributor).name = item.contributor_id!.name;
+        (item as IContributor).avatar = item.contributor_id!.avatar.id;
+
         delete (item as IContributor).contributor_id;
       });
     });

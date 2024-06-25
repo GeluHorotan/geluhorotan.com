@@ -20,6 +20,7 @@ export const GET_PROJECTS_QUERY = `
         contributor_id {
           id
           name
+          avatar {id}
         }
       }
       url

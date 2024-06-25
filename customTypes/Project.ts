@@ -1,14 +1,20 @@
 export interface ITechnology {
   id: string;
   name: string;
-  technology_id?: { id: string; name: string };
+  identifier: string;
+  technology_id?: { id: string; name: string; identifier: string };
 }
 
 export interface IContributor {
+  avatar: any;
   id: string;
   name: string;
   role: string;
-  contributor_id?: { id: string; name: string };
+  contributor_id?: {
+    avatar: { id: string };
+    id: string;
+    name: string;
+  };
 }
 
 export interface IProject {

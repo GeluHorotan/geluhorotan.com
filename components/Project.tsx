@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import { MeshGradient } from './svgs/MeshGradient';
-import { Stage } from './Stage';
-import { Technologies } from './Technologies';
-import { IContributor } from '@customTypes/Project';
+import { MeshGradient } from '@components/svgs/MeshGradient';
+import { Stage } from '@components/Stage';
+import { Technologies } from '@components/Technologies';
+import { Contributors } from '@components/Contributors';
 
 interface IProject {
   project: any;
@@ -81,11 +81,7 @@ export function Project({ project, isReversed }: IProject) {
           <h6>{description}</h6>
         </div>
         <Technologies technologies={technologies} />
-        <div>
-          {contributors.map((contributor: IContributor) => {
-            return <div key={contributor.id}>{contributor.name}</div>;
-          })}
-        </div>
+        <Contributors contributors={contributors}></Contributors>
       </div>
     </div>
   );
