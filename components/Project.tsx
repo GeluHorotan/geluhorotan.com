@@ -64,7 +64,7 @@ export function Project({ project, isReversed }: IProject) {
           className={`absolute top-0 right-0 w-full h-full ${styles.imageContainer[orientation]} py-14`}
         >
           <Image
-            src={`${process.env.ASSETS_URL}/${image.id}`}
+            src={`${process.env.ASSETS_URL}/${image.id}?key=optimised`}
             width={1980}
             height={1024}
             alt="test"
@@ -88,9 +88,11 @@ export function Project({ project, isReversed }: IProject) {
           <Link href={url} className="w-full" target="_blank">
             <Button className="w-full">VISIT</Button>
           </Link>
-          <Button className="w-full" variant={'outline'}>
-            LEARN MORE
-          </Button>
+          <Link href={`/project/${slug}`} className="w-full">
+            <Button className="w-full" variant={'outline'}>
+              LEARN MORE
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
