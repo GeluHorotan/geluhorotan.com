@@ -4,8 +4,8 @@ import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
 // SVG
-import { Sun } from '@components/svgs/Sun';
-import { Moon } from '@components/svgs/Moon';
+import { Sun } from '@components/svgs/SunIcon';
+import { Moon } from '@components/svgs/MoonIcon';
 
 export function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false);

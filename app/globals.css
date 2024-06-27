@@ -13,11 +13,13 @@
     --color-released: #f20c3a;
     --color-mvp: #0c68f2;
     --color-development: #0cf249;
+    --color-neutral: #ebe7e8;
   }
   :root[class~='dark'] {
     --color-released: #f85778;
     --color-mvp: #5797f8;
     --color-development: #57f882;
+    --color-neutral: #24282e;
   }
 
   body {

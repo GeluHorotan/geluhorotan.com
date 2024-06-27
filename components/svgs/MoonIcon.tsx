@@ -7,8 +7,8 @@ export function Moon({ size = 18, className }: IIconProps) {
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
-      viewBox="0 0 17.875 19.503"
       className={cn('fill-inherit', className)}
+      viewBox="0 0 17.875 19.503"
     >
       <path
         id="Icon_ion-ios-moon"

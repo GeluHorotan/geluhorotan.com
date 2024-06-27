@@ -1,0 +1,28 @@
+{
+  "contact_links": [
+    {
+      "identifier": "mail",
+      "name": "Email",
+      "to": "/",
+      "id": "geluhorotan@geluhorotan.com"
+    },
+    {
+      "identifier": "linkedin",
+      "name": "LinkedIn",
+      "to": "/",
+      "id": "@GeluHorotan"
+    },
+    {
+      "identifier": "github",
+      "name": "GitHub",
+      "to": "/",
+      "id": "@GeluHorotan"
+    },
+    {
+      "identifier": "twitter",
+      "name": "Twitter",
+      "to": "/",
+      "id": "@oxymoron365"
+    }
+  ]
+}

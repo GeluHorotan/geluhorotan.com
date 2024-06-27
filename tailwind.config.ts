@@ -18,6 +18,7 @@ const config: Config = {
         released: 'var(--color-released)',
         mvp: 'var(--color-mvp)',
         development: 'var(--color-development)',
+        neutral: 'var(--color-neutral)',
       },
     },
   },
@@ -40,6 +41,7 @@ const config: Config = {
           colors: {
             background: '#1A1D21',
             foreground: '#F7F3F4',
+
             primary: {
               DEFAULT: '#578EF8',
               foreground: '#1A1D21',
@@ -50,6 +52,7 @@ const config: Config = {
           colors: {
             background: '#F7F3F4',
             foreground: '#1A1D21',
+
             primary: {
               DEFAULT: '#125AE1',
               foreground: '#F7F3F4',
