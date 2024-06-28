@@ -1,38 +1,14 @@
-import { submitContactForm } from '@data/submitContactForm';
-import { Button } from './ui/Button';
-import { Input } from './ui/Input';
-import { Label } from './ui/Label';
-import { Textarea } from './ui/Textarea';
-import { cn } from '@lib/utils';
 import SvgFinder from './svgs/SvgFinder';
 import contact_locale from '@locale/en/contact_locale.json';
-
-interface INoise {
-  className?: string;
-}
-
-const Noise = ({ className }: INoise) => {
-  return (
-    <div
-      className={cn(
-        'absolute z-10 inset-0 w-full h-full  transform opacity-10 [mask-image:radial-gradient(#fff,transparent,75%)]',
-        className
-      )}
-      style={{
-        backgroundImage: 'url(/noise.webp)',
-        backgroundSize: '30%',
-      }}
-    ></div>
-  );
-};
+import { NoiseTexture } from './NoiseTexture';
+import { ContactForm } from './ContactForm';
 
 export function Contact() {
   const { contact_links } = contact_locale;
   return (
     <section className=" w-full  max-w-8xl  flex items-center justify-center self-center">
       <div className="w-full bg-indigo-800 relative rounded-xl p-20 [background-image:radial-gradient(88%_100%_at_top,rgba(255,255,255,0.5),rgba(255,255,255,0))]">
-        <Noise className="rounded-xl"></Noise>
-
+        <NoiseTexture className="rounded-xl"></NoiseTexture>
         <div
           style={{
             boxShadow:
@@ -40,59 +16,7 @@ export function Contact() {
           }}
           className="px-28 z-20 relative py-8 bg-background rounded-xl flex gap-20 "
         >
-          <form
-            action={submitContactForm}
-            className=" w-1/2 flex flex-col items-start gap-4"
-          >
-            <div className="flex flex-col gap-3 w-full">
-              <Label htmlFor="full_name">Full name</Label>
-              <Input
-                type="text"
-                id="full_name"
-                placeholder="Gelu Horotan"
-                required
-              />
-            </div>
-            <div className="flex flex-col gap-3 w-full">
-              <Label htmlFor="email">Email</Label>
-              <Input
-                type="email"
-                id="email"
-                placeholder="geluhorotan@streamlinedsolutions.com"
-                required
-              />
-            </div>
-            <div className="flex flex-col gap-3 w-full">
-              <Label htmlFor="phone">Phone</Label>
-              <Input
-                type="phone"
-                id="phone"
-                placeholder="+40 7543 742"
-                required
-              />
-            </div>
-            <div className="flex flex-col gap-3 w-full">
-              <Label htmlFor="subject">Subject</Label>
-              <Input
-                type="subject"
-                id="subject"
-                placeholder="B2B React Project"
-                required
-              />
-            </div>
-
-            <div className="flex flex-col gap-3 w-full">
-              <Label htmlFor="message">Message</Label>
-              <Textarea
-                id="message"
-                placeholder="Write your thoughts here."
-                required
-              />
-            </div>
-            <Button className="w-full" type="submit">
-              Send message
-            </Button>
-          </form>
+          <ContactForm />
           <div className="w-1/2  justify-between  flex flex-col gap-8 ">
             <div className="flex gap-8 flex-col  ">
               <div className="flex gap-4 flex-col ">

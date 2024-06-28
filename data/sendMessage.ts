@@ -2,8 +2,9 @@ import { directus } from '@lib/directus';
 import { SUBMIT_CONTACT_FORM_QUERY } from './queries';
 import { IContactFormParams } from '@customTypes/IContactFormParams';
 
-export async function submitContactForm(formData: any) {
+export async function sendMessage(formData: any) {
   'use server';
+
   const full_name = formData.get('full_name');
   const email = formData.get('email');
   const phone = formData.get('phone');
