@@ -1,22 +1,20 @@
-import { directus } from '@lib/directus';
-import { SUBMIT_CONTACT_FORM_QUERY } from './queries';
-import { IContactFormParams } from '@customTypes/IContactFormParams';
-
-export async function sendMessage(formData: any) {
-  'use server';
-
-  const full_name = formData.get('full_name');
-  const email = formData.get('email');
-  const phone = formData.get('phone');
-  const message = formData.get('message');
-  const subject = formData.get('subject');
-
+export async function sendMessage({
+  full_name,
+  email,
+  phone,
+  subject,
+  message,
+}: any) {
   try {
-    const res = await directus.query<IContactFormParams>(
-      SUBMIT_CONTACT_FORM_QUERY({ full_name, email, phone, message, subject })
-    );
-    console.log(res);
-    return res;
+    const res = await fetch('/api/message', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ full_name, email, phone, subject, message }),
+    });
+    const json = await res.json();
+    return json;
   } catch (error) {
     console.log(error);
   }

@@ -40,14 +40,14 @@ export const SUBMIT_CONTACT_FORM_QUERY = ({
   subject,
 }: IContactFormParams) => {
   return `
-  mutation {
-  create_message_item(data: {full_name: ${JSON.stringify(full_name)}, email: ${JSON.stringify(email)} , phone: ${JSON.stringify(phone)} ,  subject: ${JSON.stringify(subject)}, message: ${JSON.stringify(message)} }) {
-    full_name,
-    email,
-    phone,
-    message,
-    subject
-  }
-}
-`;
+    mutation {
+      create_message_item(data: { full_name: "${full_name}", email: "${email}", phone: "${phone}", subject: "${subject}", message: "${message}" }) {
+        full_name
+        email
+        phone
+        subject
+        message
+      }
+    }
+  `;
 };

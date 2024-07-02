@@ -38,7 +38,7 @@ export function Contact() {
                     <SvgFinder
                       identifier={link.identifier}
                       size={32}
-                      className="fill-foreground"
+                      className="fill-foreground "
                     />
                     <div className="flex flex-col text-[#777] font-medium ">
                       <span className="">{link?.name}</span>
