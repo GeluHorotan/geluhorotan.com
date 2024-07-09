@@ -1,20 +1,24 @@
-import { Bulb } from '@components/svgs/Bulb';
-import { Grid } from '@components/svgs/Grid';
-import { Sun } from '@components/svgs/Sun';
-import { Moon } from '@components/svgs/Moon';
-import { ReactLogo } from '@components/svgs/ReactLogo';
-import { NextLogo } from '@components/svgs/NextLogo';
-import { TypescriptLogo } from '@components/svgs/TypescriptLogo';
-import { NetlifyLogo } from '@components/svgs/NetlifyLogo';
-import { ReactQueryLogo } from '@components/svgs/ReactQueryLogo';
-import { GraphqlLogo } from '@components/svgs/GraphqlLogo';
-import { TailwindLogo } from '@components/svgs/TailwindLogo';
-import { StorybookLogo } from '@components/svgs/StorybookLogo';
-import { DirectusLogo } from '@components/svgs/DirectusLogo';
-import { AwsLogo } from '@components/svgs/AwsLogo';
-import { PostgreSqlLogo } from '@components/svgs/PostgreSqlLogo';
-import { VercelLogo } from '@components/svgs/VercelLogo';
-import { StyledComponentsLogo } from '@components/svgs/StyledComponentsLogo';
+import { Bulb } from '@components/svgs/BulbIcon';
+import { Grid } from '@components/svgs/GridIcon';
+import { Sun } from '@components/svgs/SunIcon';
+import { Moon } from '@components/svgs/MoonIcon';
+import { ReactLogo } from '@components/svgs/ReactIcon';
+import { NextLogo } from '@components/svgs/NextIcon';
+import { TypescriptLogo } from '@components/svgs/TypescriptIcon';
+import { NetlifyLogo } from '@components/svgs/NetlifyIcon';
+import { ReactQueryLogo } from '@components/svgs/ReactQueryIcon';
+import { GraphqlLogo } from '@components/svgs/GraphqlIcon';
+import { TailwindLogo } from '@components/svgs/TailwindIcon';
+import { StorybookLogo } from '@components/svgs/StorybookIcon';
+import { DirectusLogo } from '@components/svgs/DirectusIcon';
+import { AwsLogo } from '@components/svgs/AwsIcon';
+import { PostgreSqlLogo } from '@components/svgs/PostgresqlIcon';
+import { VercelLogo } from '@components/svgs/VercelIcon';
+import { StyledComponentsLogo } from '@components/svgs/StyledComponentsIcon';
+import { GithubIcon } from '@components/svgs/GithubIcon';
+import { TwitterIcon } from '@components/svgs/TwitterIcon';
+import { LinkedInIcon } from '@components/svgs/LinkedInIcon';
+import { MailIcon } from '@components/svgs/MailIcon';
 
 interface ISvgFinder {
   identifier: string;
@@ -32,6 +36,22 @@ function SvgFinder({ identifier, size = 24, className }: ISvgFinder) {
     {
       identifier: 'bulb',
       svgToRender: <Bulb size={size} className={className} />,
+    },
+    {
+      identifier: 'github',
+      svgToRender: <GithubIcon size={size} className={className} />,
+    },
+    {
+      identifier: 'twitter',
+      svgToRender: <TwitterIcon size={size} className={className} />,
+    },
+    {
+      identifier: 'linkedin',
+      svgToRender: <LinkedInIcon size={size} className={className} />,
+    },
+    {
+      identifier: 'mail',
+      svgToRender: <MailIcon size={size} className={className} />,
     },
     {
       identifier: 'grid',
