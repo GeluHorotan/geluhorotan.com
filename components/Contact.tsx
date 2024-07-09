@@ -41,7 +41,7 @@ export function Contact() {
                       className="fill-foreground "
                     />
                     <div className="flex flex-col text-[#777] font-medium ">
-                      <span className="">{link?.name}</span>
+                      <span className="text-base">{link?.name}</span>
                       <span className="text-[13px] ">{link?.id}</span>
                     </div>
                   </div>
