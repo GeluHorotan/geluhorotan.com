@@ -1,14 +1,14 @@
-import SvgFinder from './svgs/SvgFinder';
+import SvgFinder from '@components/svgs/SvgFinder';
 import contact_locale from '@locale/en/contact_locale.json';
-import { NoiseTexture } from './NoiseTexture';
-import { ContactForm } from './ContactForm';
+
+import { ContactForm } from '@components/ContactForm';
+import { NoiseBackground } from '@components/NoiseBackground';
 
 export function Contact() {
   const { contact_links } = contact_locale;
   return (
     <section className=" w-full  max-w-8xl  flex items-center justify-center self-center">
-      <div className="w-full bg-indigo-800 relative rounded-xl p-20 [background-image:radial-gradient(88%_100%_at_top,rgba(255,255,255,0.5),rgba(255,255,255,0))]">
-        <NoiseTexture className="rounded-xl"></NoiseTexture>
+      <NoiseBackground>
         <div
           style={{
             boxShadow:
@@ -50,7 +50,7 @@ export function Contact() {
             </div>
           </div>
         </div>
-      </div>
+      </NoiseBackground>
     </section>
   );
 }
