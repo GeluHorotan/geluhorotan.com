@@ -9,21 +9,31 @@
 }
 
 @layer base {
-  :root {
+  :root[data-theme~='light'] {
     --color-released: #f20c3a;
     --color-mvp: #0c68f2;
     --color-development: #0cf249;
     --color-neutral: #ebe7e8;
+    --color-background: #f7f3f4;
+    --color-foreground: #1a1d21;
+    --color-primary: #125ae1;
   }
-  :root[class~='dark'] {
+  :root[data-theme~='dark'] {
     --color-released: #f85778;
     --color-mvp: #5797f8;
     --color-development: #57f882;
     --color-neutral: #24282e;
+    --color-background: #1a1d21;
+    --color-foreground: #f7f3f4;
+    --color-primary: #578ef8;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-primary text-secondary;
+    @apply bg-red-400 !important;
   }
   h1 {
     @apply text-5xl font-bold leading-normal;

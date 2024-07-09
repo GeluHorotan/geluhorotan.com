@@ -1,12 +1,15 @@
 import about_locale from '@locale/en/about_locale.json';
-import SvgFinder from './svgs/SvgFinder';
+import SvgFinder from '@components/svgs/SvgFinder';
 import Image from 'next/image';
-import { NoiseBackground } from './NoiseBackground';
+import { NoiseBackground } from '@components/NoiseBackground';
 
 export function About() {
   const { about_list } = about_locale;
   return (
-    <section className="w-full  max-w-8xl  flex items-center justify-center text-5xl font-bold self-center ">
+    <section
+      id="about"
+      className="w-full  max-w-8xl  flex items-center justify-center text-5xl font-bold self-center "
+    >
       <div className="flex flex-col items-center justify-center gap-20 w-full">
         <div className="flex gap-4 flex-col items-center justify-center w-1/2  text-center">
           <h2 className="w-1/2">
