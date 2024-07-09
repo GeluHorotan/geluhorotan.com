@@ -5,7 +5,7 @@ import { FlipWords } from './aceternity-ui/FlipWords';
 export function Hero() {
   const words = ['scale', 'grow', 'adapt', 'expand'];
   return (
-    <section className="w-full h-screen  flex items-center justify-between gap-40 text-5xl font-bold max-w-8xl  ">
+    <section className="w-full h-screen  flex items-center justify-center gap-80 text-5xl font-bold max-w-8xl  ">
       <div className="w-1/2    flex flex-col gap-14">
         <div className="flex flex-col gap-8">
           <h1>
