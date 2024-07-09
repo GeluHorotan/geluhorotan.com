@@ -9,13 +9,7 @@ export function Contact() {
   return (
     <section className=" w-full  max-w-8xl  flex items-center justify-center self-center">
       <NoiseBackground>
-        <div
-          style={{
-            boxShadow:
-              '0 10px 32px rgba(34, 42, 53, 0.12), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.05), 0 4px 6px rgba(34, 42, 53, 0.08), 0 24px 108px rgba(47, 48, 55, 0.10)',
-          }}
-          className="px-28 z-20 relative py-8 bg-background rounded-xl flex gap-20 "
-        >
+        <div className="px-28  py-8 bg-background rounded-xl flex gap-20 ">
           <ContactForm />
           <div className="w-1/2  justify-between  flex flex-col gap-8 ">
             <div className="flex gap-8 flex-col  ">

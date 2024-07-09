@@ -1,6 +1,7 @@
 import about_locale from '@locale/en/about_locale.json';
 import SvgFinder from './svgs/SvgFinder';
 import Image from 'next/image';
+import { NoiseBackground } from './NoiseBackground';
 
 export function About() {
   const { about_list } = about_locale;
@@ -34,16 +35,18 @@ export function About() {
               </div>
             ))}
           </div>
-          <div className="  w-1/2   flex items-center justify-end ">
-            <Image
-              src={
-                'https://api.microlink.io/?url=https%3A%2F%2Frehabsportstherapy.co.uk&overlay.browser=dark&screenshot=true&embed=screenshot.url'
-              }
-              alt="The Sinners Project"
-              width={1280}
-              height={720}
-              className=" rounded-xl"
-            />
+          <div className=" w-1/2    flex items-center justify-end ">
+            <NoiseBackground className="p-12 bg-pink-800">
+              <Image
+                src={
+                  'https://api.microlink.io/?url=https%3A%2F%2Frehabsportstherapy.co.uk&screenshot=true&embed=screenshot.url'
+                }
+                alt="The Sinners Project"
+                width={1280}
+                height={720}
+                className=" rounded-xl w-full h-full"
+              />
+            </NoiseBackground>
           </div>
         </div>
       </div>
