@@ -33,7 +33,7 @@
   }
 
   body {
-    @apply bg-red-400 !important;
+    @apply bg-background overflow-x-hidden;
   }
   h1 {
     @apply text-5xl font-bold leading-normal;

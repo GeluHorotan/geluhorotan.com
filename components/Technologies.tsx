@@ -1,4 +1,4 @@
-import { ITechnology } from '@customTypes/Project';
+import { ITechnology } from '@customTypes/ProjectInterfaces';
 import { Technology } from './Technology';
 
 interface ITechnologies {

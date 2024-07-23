@@ -1,4 +1,4 @@
-import { IContactFormParams } from '@customTypes/IContactFormParams';
+import { IContactFormParams } from '@customTypes/ContactFormInterfaces';
 
 export const GET_PROJECTS_QUERY = `
   query {

@@ -1,4 +1,4 @@
-import { IMessage } from '@customTypes/IContactFormParams';
+import { IMessage } from '@customTypes/ContactFormInterfaces';
 import { SUBMIT_CONTACT_FORM_QUERY } from '@data/queries';
 import { directus } from '@lib/directus';
 

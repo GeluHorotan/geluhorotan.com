@@ -3,7 +3,7 @@ import {
   IProject,
   IProjects,
   ITechnology,
-} from '@customTypes/Project';
+} from '@customTypes/ProjectInterfaces';
 import { GET_PROJECTS_QUERY } from '@data/queries';
 import { directus } from '@lib/directus';
 

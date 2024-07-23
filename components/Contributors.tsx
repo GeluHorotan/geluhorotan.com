@@ -1,4 +1,4 @@
-import { IContributor } from '@customTypes/Project';
+import { IContributor } from '@customTypes/ProjectInterfaces';
 import { Contributor } from './Contributor';
 
 interface IContributors {

@@ -7,7 +7,10 @@ import { NoiseBackground } from '@components/NoiseBackground';
 export function Contact() {
   const { contact_links } = contact_locale;
   return (
-    <section className=" w-full  max-w-8xl  flex items-center justify-center self-center">
+    <section
+      id="contact"
+      className=" w-full  max-w-8xl  flex items-center justify-center self-center"
+    >
       <NoiseBackground>
         <div className="px-28  py-8 bg-background rounded-xl flex gap-20 ">
           <ContactForm />

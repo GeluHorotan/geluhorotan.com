@@ -1,5 +1,5 @@
 import { cn } from '@lib/utils';
-import { IIconProps } from '@customTypes/Icon';
+import { IIconProps } from '@customTypes/IconInterfaces';
 
 export function Sun({ size = 18, className }: IIconProps) {
   return (

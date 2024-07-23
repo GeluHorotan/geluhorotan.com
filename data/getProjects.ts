@@ -1,4 +1,4 @@
-import { IProject } from '@customTypes/Project';
+import { IProject } from '@customTypes/ProjectInterfaces';
 
 export async function getProjects() {
   try {
