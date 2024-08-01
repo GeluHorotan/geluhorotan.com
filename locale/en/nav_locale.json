@@ -2,13 +2,15 @@
   "nav_buttons": [
     {
       "name": "Home",
+      "id": 1,
       "to": ""
     },
-    { "name": "Projects", "to": "projects" },
+    { "name": "Projects", "to": "projects", "id": 2 },
 
     {
       "name": "Contact",
-      "to": "contact"
+      "to": "contact",
+      "id": 3
     }
   ]
 }
