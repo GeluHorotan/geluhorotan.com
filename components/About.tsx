@@ -39,7 +39,7 @@ export function About() {
             ))}
           </div>
           <div className=" w-1/2 max-[900px]:w-full   flex items-center justify-end ">
-            <NoiseBackground className="p-12  bg-pink-800">
+            <NoiseBackground className="p-12 max-sm:p-6  bg-pink-800">
               <Image
                 src={
                   'https://api.microlink.io/?url=https%3A%2F%2Frehabsportstherapy.co.uk&screenshot=true&embed=screenshot.url'

@@ -94,8 +94,9 @@
   h6 {
     @apply text-[1.188rem] leading-normal max-md:text-[16px];
   }
+
   p {
-    @apply text-base font-normal max-sm:text-lg leading-normal max-md:text-[15px];
+    @apply text-base font-normal  leading-normal max-md:text-[15px];
   }
   .small {
     @apply text-[0.813rem] leading-normal;
