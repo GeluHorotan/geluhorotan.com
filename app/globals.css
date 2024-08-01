@@ -77,25 +77,25 @@
     @apply bg-background overflow-x-hidden;
   }
   h1 {
-    @apply text-5xl font-bold leading-normal;
+    @apply text-5xl font-bold leading-normal max-md:text-[36px];
   }
   h2 {
-    @apply text-[2.5rem] font-bold leading-normal;
+    @apply text-[2.5rem] font-bold leading-normal max-md:text-[32px];
   }
   h3 {
-    @apply text-[2.063rem] font-semibold leading-normal;
+    @apply text-[2.063rem] font-semibold leading-normal max-md:text-[26px];
   }
   h4 {
-    @apply text-[1.75rem] font-semibold leading-normal;
+    @apply text-[1.75rem] font-semibold leading-normal max-md:text-[22px];
   }
   h5 {
-    @apply text-[1.438rem] font-medium leading-normal;
+    @apply text-[1.438rem] font-medium leading-normal max-md:text-[18px];
   }
   h6 {
-    @apply text-[1.188rem] leading-normal;
+    @apply text-[1.188rem] leading-normal max-md:text-[16px];
   }
   p {
-    @apply text-base font-normal max-sm:text-lg leading-normal;
+    @apply text-base font-normal max-sm:text-lg leading-normal max-md:text-[15px];
   }
   .small {
     @apply text-[0.813rem] leading-normal;
