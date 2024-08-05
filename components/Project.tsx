@@ -5,7 +5,6 @@ import { Technologies } from '@components/Technologies';
 import { Contributors } from '@components/Contributors';
 import { Button } from './ui/Button';
 import Link from 'next/link';
-import { SectionTitle } from './SectionTitle';
 
 interface IProject {
   project: any;
@@ -43,26 +42,26 @@ export function Project({ project, isReversed }: IProject) {
       reversed: 'flex-row-reverse',
     },
     infoContainer: {
-      normal: 'pr-[260px]',
-      reversed: 'pl-[260px]',
+      normal: 'pr-[160px]  max-[1500px]:pr-0',
+      reversed: 'pl-[160px]  max-[1500px]:pl-0',
     },
     imageContainer: {
-      normal: 'pr-14',
-      reversed: 'pl-14',
+      normal: 'pr-14 max-[1500px]:p-14',
+      reversed: 'pl-14 max-[1500px]:p-14',
     },
     imageBorderRadius: {
-      normal: 'rounded-tr-xl rounded-br-xl',
-      reversed: 'rounded-bl-xl rounded-tl-xl',
+      normal: 'rounded-tr-xl rounded-br-xl max-[1500px]:rounded-xl',
+      reversed: 'rounded-bl-xl rounded-tl-xl max-[1500px]:rounded-xl',
     },
   };
 
   return (
     <div
-      className={` w-full flex items-center gap-20   ${styles.container[orientation]}`}
+      className={`px-14  max-[1200px]:px-7 w-full flex items-center gap-20 max-[1500px]:flex-col max-[1500px]:max-w-8xl  ${styles.container[orientation]}`}
     >
-      <div className="w-1/2 h-full relative ">
+      <div className="w-1/2 max-md:w-full max-[1500px]:w-[75%]  h-full relative  ">
         <div
-          className={`absolute top-0 right-0 w-full h-full ${styles.imageContainer[orientation]} py-14`}
+          className={`absolute  top-0 right-0 w-full h-full ${styles.imageContainer[orientation]} py-14`}
         >
           <Image
             src={`${process.env.ASSETS_URL}/${image.id}?key=optimised`}
@@ -76,12 +75,12 @@ export function Project({ project, isReversed }: IProject) {
         <MeshGradient className={styles.imageBorderRadius[orientation]} />
       </div>
       <div
-        className={`w-1/2 h-full   ${styles.infoContainer[orientation]} flex flex-col gap-14`}
+        className={`w-1/2 max-md:w-full max-[1500px]:w-[75%] h-full   ${styles.infoContainer[orientation]} flex flex-col gap-14`}
       >
         <div className="flex flex-col gap-4">
           <Stage stage={stage} />
           <h4> {name}</h4>
-          <h6>{description}</h6>
+          <p className="line-clamp-3">{description}</p>
         </div>
         <Technologies technologies={technologies} />
         <Contributors contributors={contributors}></Contributors>

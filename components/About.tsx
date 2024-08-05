@@ -9,7 +9,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="w-full px-14  max-w-8xl  flex items-center justify-center text-5xl font-bold self-center max-[1200px]:px-7 "
+      className="w-full px-14  max-[1200px]:px-7 max-w-8xl  flex items-center justify-center text-5xl font-bold self-center  "
     >
       <div className="flex flex-col items-center justify-center gap-20 w-full">
         <SectionTitle
