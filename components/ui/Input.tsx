@@ -12,10 +12,10 @@ export interface InputProps
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, label, id, error, ...props }, ref) => {
     return (
-      <div className="flex flex-col gap-3 w-full relative  ">
-        <Label htmlFor={id}>{label}</Label>
-        <div className="small text-red-400 !font-light  absolute right-0">
-          {error}
+      <div className="flex flex-col gap-3 w-full relative   ">
+        <div className="flex flex-col gap-1">
+          <Label htmlFor={id}>{label}</Label>
+          <div className="small text-red-400 !font-light  ">{error}</div>
         </div>
         <input
           type={type}
