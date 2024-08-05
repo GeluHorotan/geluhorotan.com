@@ -84,7 +84,7 @@ export function Project({ project, isReversed }: IProject) {
         </div>
         <Technologies technologies={technologies} />
         <Contributors contributors={contributors}></Contributors>
-        <div className="w-full flex gap-4">
+        <div className="w-1/2 max-md:w-full flex gap-4">
           <Link href={url} className="w-full" target="_blank">
             <Button className="w-full">VISIT</Button>
           </Link>

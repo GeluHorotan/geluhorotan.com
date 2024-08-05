@@ -9,10 +9,10 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className=" w-full  max-w-8xl  flex items-center justify-center self-center "
+      className=" w-full   max-w-8xl  flex items-center justify-center self-center px-14  max-[1200px]:px-7"
     >
-      <NoiseBackground noBackground>
-        <div className="  p-8 w-full bg-background rounded-xl flex gap-20 max-[800px]:gap-10 max-md:flex-col-reverse   ">
+      <NoiseBackground>
+        <div className="  p-8 max-md:p-0 w-full bg-background rounded-xl flex gap-20 max-[800px]:gap-10 max-md:flex-col-reverse   ">
           <ContactForm />
           <div className="w-1/2 max-[1050px]:w-full  justify-center  flex flex-col gap-8 max-md:gap-4 ">
             <span className="text-[27px] font-semibold">Get in touch!</span>
