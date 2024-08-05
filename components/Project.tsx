@@ -5,6 +5,7 @@ import { Technologies } from '@components/Technologies';
 import { Contributors } from '@components/Contributors';
 import { Button } from './ui/Button';
 import Link from 'next/link';
+import { SectionTitle } from './SectionTitle';
 
 interface IProject {
   project: any;
