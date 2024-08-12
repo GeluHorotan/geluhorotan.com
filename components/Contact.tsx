@@ -13,10 +13,10 @@ export function Contact() {
     >
       <div
         className={
-          'bg-indigo-800 rounded-xl p-20 [background-image:radial-gradient(88%_100%_at_top,rgba(255,255,255,0.5),rgba(255,255,255,0))] max-[1000px]:p-0 max-[1000px]:rounded-none max-[1000px]:bg-transparent w-full'
+          'bg-indigo-800 relative rounded-xl p-20 [background-image:radial-gradient(88%_100%_at_top,rgba(255,255,255,0.5),rgba(255,255,255,0))] max-[1000px]:p-0 max-[1000px]:rounded-none max-[1000px]:bg-transparent w-full'
         }
       >
-        <NoiseTexture className="rounded-xl " />
+        <NoiseTexture className="rounded-xl max-[1000px]:hidden" />
         <div className="z-20 relative  shadow-lg max-[1000px]:shadow-none">
           <div className="max-[1000px]:p-0 max-[1000px]:rounded-none p-8 max-md:p-0 w-full bg-background rounded-xl flex gap-20 max-[800px]:gap-10 max-md:flex-col-reverse   ">
             <ContactForm />

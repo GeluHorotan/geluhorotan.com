@@ -8,7 +8,7 @@ export function FloatingPhone() {
         transformStyle: 'preserve-3d',
         transform: 'rotateY(-30deg) rotateX(15deg)',
       }}
-      className="rounded-[24px] bg-primary"
+      className="rounded-[24px] bg-primary "
     >
       <motion.div
         initial={{
@@ -24,7 +24,7 @@ export function FloatingPhone() {
           ease: 'easeInOut',
         }}
         //  max-md:h-80 max-md:w-40 - responsive size
-        className="relative h-96 w-56 max-md:h-[22rem] max-md:w-[12rem]  rounded-[24px] border-2 border-b-4 border-r-4 border-white border-l-neutral-200 border-t-neutral-200 bg-neutral-900 p-1 pl-[3px] pt-[3px]"
+        className="relative h-96 w-56 max-md:h-[22rem] max-md:w-[12rem] max-[500px]:h-[15rem] max-[500px]:w-[8rem]  rounded-[24px] border-2 border-b-4 border-r-4 border-white border-l-neutral-200 border-t-neutral-200 bg-neutral-900 p-1 pl-[3px] pt-[3px]"
       >
         <HeaderBar />
         <Screen />
