@@ -11,7 +11,7 @@ export function About() {
       id="about"
       className="w-full px-14  max-[1200px]:px-7 max-w-8xl  flex items-center justify-center text-5xl font-bold self-center  "
     >
-      <div className="flex flex-col items-center justify-center gap-20 w-full">
+      <div className="flex flex-col items-center justify-center gap-20 max-md:gap-14 w-full">
         <SectionTitle
           desc="Your trust is paramount, and I'm committed to delivering results
         that exceed your expectations."
@@ -20,7 +20,7 @@ export function About() {
           You&apos;re in <br /> <span className="text-primary">safe hands</span>
         </SectionTitle>
 
-        <div className="flex items-center justify-between w-full max-[900px]:flex-col-reverse max-[900px]:justify-center  max-[900px]:gap-20 ">
+        <div className="flex items-center justify-between w-full max-[900px]:flex-col-reverse max-[900px]:justify-center  max-[900px]:gap-20 max-md:gap-14 ">
           <div className="flex flex-col gap-14 w-[45%]  max-[900px]:w-[70%] self-start max-md:w-full">
             {about_list?.map((item, i) => (
               <div key={i} className="flex flex-col gap-4">

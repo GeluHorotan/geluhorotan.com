@@ -57,7 +57,7 @@ export function Project({ project, isReversed }: IProject) {
 
   return (
     <div
-      className={` w-full flex items-center gap-20 max-[1500px]:flex-col max-[1500px]:max-w-8xl  ${styles.container[orientation]}`}
+      className={` w-full  flex items-center gap-20 max-md:gap-9 max-[1500px]:flex-col max-[1500px]:max-w-8xl  ${styles.container[orientation]}`}
     >
       <div className="w-1/2 max-md:w-full max-[1500px]:w-[75%]  h-full relative  ">
         <div
@@ -75,7 +75,7 @@ export function Project({ project, isReversed }: IProject) {
         <MeshGradient className={styles.imageBorderRadius[orientation]} />
       </div>
       <div
-        className={`w-1/2 max-md:w-full max-[1500px]:w-[75%] h-full   ${styles.infoContainer[orientation]} flex flex-col gap-14`}
+        className={`w-1/2  max-md:w-full max-[1500px]:w-[75%] h-full   ${styles.infoContainer[orientation]} flex flex-col gap-14`}
       >
         <div className="flex flex-col gap-4">
           <Stage stage={stage} />
