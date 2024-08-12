@@ -5,6 +5,7 @@ import '@app/globals.css';
 // Components
 import { Header } from '@components/navigation/Header';
 import { Providers } from '@components/Providers';
+import { Footer } from '@components/navigation/Footer';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -28,6 +29,7 @@ export default function RootLayout({
           <main className="flex flex-col items-center justify-center  bg-background text-foreground">
             <Header />
             {children}
+            <Footer />
           </main>
         </Providers>
       </body>

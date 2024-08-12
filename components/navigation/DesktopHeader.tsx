@@ -1,9 +1,9 @@
 import { ThemeSwitcher } from '@components/ThemeSwitcher';
-import { IHeaderButtons } from '@customTypes/HeaderInterfaces';
+import { INavigationButton } from '@customTypes/NavigationInterfaces';
 import Link from 'next/link';
 
 interface IDesktopHeader {
-  buttons: IHeaderButtons[];
+  buttons: INavigationButton[];
 }
 export function DesktopHeader({ buttons }: IDesktopHeader) {
   return (
@@ -19,7 +19,7 @@ export function DesktopHeader({ buttons }: IDesktopHeader) {
             );
           })}
         </ul>
-        <ThemeSwitcher></ThemeSwitcher>
+        <ThemeSwitcher />
       </div>
     </div>
   );

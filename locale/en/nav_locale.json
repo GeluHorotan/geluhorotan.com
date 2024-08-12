@@ -6,11 +6,61 @@
       "to": ""
     },
     { "name": "Projects", "to": "projects", "id": 2 },
-
     {
       "name": "Contact",
       "to": "contact",
       "id": 3
+    }
+  ],
+  "nav_social_buttons": [
+    {
+      "isSocial": false,
+      "name": "Email",
+      "value": "geluhorotan@geluhorotan.com",
+      "id": 2,
+      "identifier": "mail",
+      "to": ""
+    },
+    {
+      "isSocial": true,
+
+      "name": "X",
+      "value": "@oxymoron365",
+      "id": 3,
+      "identifier": "twitter",
+      "to": ""
+    },
+
+    {
+      "isSocial": true,
+
+      "name": "Github",
+      "value": "@GeluHorotan",
+      "id": 5,
+      "identifier": "github",
+      "to": ""
+    },
+    {
+      "isSocial": true,
+
+      "name": "LinkedIn",
+      "value": "/in/GeluHorotan",
+      "id": 4,
+      "identifier": "linkedin",
+      "to": ""
+    }
+  ],
+  "nav_legal_buttons": [
+    {
+      "name": "Terms and Conditions",
+      "id": 1,
+      "to": ""
+    },
+
+    {
+      "name": "Privacy Policy",
+      "to": "",
+      "id": 2
     }
   ]
 }

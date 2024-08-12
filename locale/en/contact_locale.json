@@ -1,6 +1,7 @@
 {
   "contact_links": [
     {
+      "isSocial": false,
       "identifier": "mail",
       "name": "Email",
       "to": "/",
