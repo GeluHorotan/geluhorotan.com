@@ -18,7 +18,7 @@ export function ThemeSwitcher() {
   if (!mounted) return null;
 
   return (
-    <div>
+    <div className=" flex items-center justify-center">
       {theme === 'dark' ? (
         <button onClick={() => setTheme('light')}>
           <Sun className="fill-foreground" />

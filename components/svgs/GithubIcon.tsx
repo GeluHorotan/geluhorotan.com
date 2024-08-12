@@ -1,4 +1,4 @@
-import { IIconProps } from '@customTypes/Icon';
+import { IIconProps } from '@customTypes/IconInterfaces';
 import { cn } from '@lib/utils';
 
 export function GithubIcon({ size = 18, className }: IIconProps) {
@@ -7,7 +7,7 @@ export function GithubIcon({ size = 18, className }: IIconProps) {
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
-      className={cn('fill-inherit', className)}
+      className={cn('fill-inherit ', className)}
       viewBox="0 0 16 16.605"
     >
       <path

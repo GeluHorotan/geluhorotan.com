@@ -42,26 +42,26 @@ export function Project({ project, isReversed }: IProject) {
       reversed: 'flex-row-reverse',
     },
     infoContainer: {
-      normal: 'pr-[260px]',
-      reversed: 'pl-[260px]',
+      normal: 'pr-[160px]  max-[1500px]:pr-0',
+      reversed: 'pl-[160px]  max-[1500px]:pl-0',
     },
     imageContainer: {
-      normal: 'pr-14',
-      reversed: 'pl-14',
+      normal: 'pr-12 max-[1500px]:p-12 max-sm:p-6',
+      reversed: 'pl-12 max-[1500px]:p-12 max-sm:p-6',
     },
     imageBorderRadius: {
-      normal: 'rounded-tr-xl rounded-br-xl',
-      reversed: 'rounded-bl-xl rounded-tl-xl',
+      normal: 'rounded-tr-xl rounded-br-xl max-[1500px]:rounded-xl',
+      reversed: 'rounded-bl-xl rounded-tl-xl max-[1500px]:rounded-xl',
     },
   };
 
   return (
     <div
-      className={` w-full flex items-center gap-20   ${styles.container[orientation]}`}
+      className={` w-full  flex items-center gap-20 max-md:gap-9 max-[1500px]:flex-col max-[1500px]:max-w-8xl  ${styles.container[orientation]}`}
     >
-      <div className="w-1/2 h-full relative ">
+      <div className="w-1/2 max-md:w-full max-[1500px]:w-[75%]  h-full relative  ">
         <div
-          className={`absolute top-0 right-0 w-full h-full ${styles.imageContainer[orientation]} py-14`}
+          className={`absolute  top-0 right-0 w-full h-full ${styles.imageContainer[orientation]} py-14`}
         >
           <Image
             src={`${process.env.ASSETS_URL}/${image.id}?key=optimised`}
@@ -75,16 +75,16 @@ export function Project({ project, isReversed }: IProject) {
         <MeshGradient className={styles.imageBorderRadius[orientation]} />
       </div>
       <div
-        className={`w-1/2 h-full   ${styles.infoContainer[orientation]} flex flex-col gap-14`}
+        className={`w-1/2  max-md:w-full max-[1500px]:w-[75%] h-full   ${styles.infoContainer[orientation]} flex flex-col gap-14`}
       >
         <div className="flex flex-col gap-4">
           <Stage stage={stage} />
           <h4> {name}</h4>
-          <h6>{description}</h6>
+          <p className="line-clamp-3">{description}</p>
         </div>
         <Technologies technologies={technologies} />
         <Contributors contributors={contributors}></Contributors>
-        <div className="w-full flex gap-4">
+        <div className="w-1/2 max-md:w-full flex gap-4">
           <Link href={url} className="w-full" target="_blank">
             <Button className="w-full">VISIT</Button>
           </Link>

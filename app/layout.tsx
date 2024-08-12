@@ -4,7 +4,7 @@ import '@app/globals.css';
 
 // Components
 import { Header } from '@components/navigation/Header';
-import { Providers } from '@app/providers';
+import { Providers } from '@components/Providers';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -21,10 +21,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html suppressHydrationWarning lang="en">
       <body className={poppins.className}>
         <Providers>
-          <main className="flex flex-col items-center justify-center  bg-background text-foreground ">
+          {' '}
+          <main className="flex flex-col items-center justify-center  bg-background text-foreground">
             <Header />
             {children}
           </main>

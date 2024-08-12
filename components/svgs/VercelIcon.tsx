@@ -1,4 +1,4 @@
-import { IIconProps } from '@customTypes/Icon';
+import { IIconProps } from '@customTypes/IconInterfaces';
 import { cn } from '@lib/utils';
 
 export function VercelLogo({ size = 24, className }: IIconProps) {

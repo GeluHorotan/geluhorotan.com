@@ -56,7 +56,7 @@ export function ContactForm() {
         handleBlur,
         handleChange,
       }) => (
-        <Form className="w-1/2 flex flex-col items-start gap-4">
+        <Form className="w-1/2 max-[1050px]:w-full flex flex-col items-start gap-4">
           <Field
             label="Full name"
             placeholder="Gelu Horotan"

@@ -1,4 +1,4 @@
-import { IContributor } from '@customTypes/Project';
+import { IContributor } from '@customTypes/ProjectInterfaces';
 import { Contributor } from './Contributor';
 
 interface IContributors {
@@ -6,7 +6,7 @@ interface IContributors {
 }
 export function Contributors({ contributors }: IContributors) {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 ">
       <span className="font-semibold">CONTRIBUTORS</span>
       <div className="flex gap-8 flex-wrap ">
         {contributors.map((contributor: IContributor) => {

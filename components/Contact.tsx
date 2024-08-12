@@ -1,52 +1,51 @@
-import SvgFinder from './svgs/SvgFinder';
+import SvgFinder from '@components/svgs/SvgFinder';
 import contact_locale from '@locale/en/contact_locale.json';
+
+import { ContactForm } from '@components/ContactForm';
 import { NoiseTexture } from './NoiseTexture';
-import { ContactForm } from './ContactForm';
 
 export function Contact() {
   const { contact_links } = contact_locale;
   return (
-    <section className=" w-full  max-w-8xl  flex items-center justify-center self-center">
-      <div className="w-full bg-indigo-800 relative rounded-xl p-20 [background-image:radial-gradient(88%_100%_at_top,rgba(255,255,255,0.5),rgba(255,255,255,0))]">
-        <NoiseTexture className="rounded-xl"></NoiseTexture>
-        <div
-          style={{
-            boxShadow:
-              '0 10px 32px rgba(34, 42, 53, 0.12), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.05), 0 4px 6px rgba(34, 42, 53, 0.08), 0 24px 108px rgba(47, 48, 55, 0.10)',
-          }}
-          className="px-28 z-20 relative py-8 bg-background rounded-xl flex gap-20 "
-        >
-          <ContactForm />
-          <div className="w-1/2  justify-between  flex flex-col gap-8 ">
-            <div className="flex gap-8 flex-col  ">
-              <div className="flex gap-4 flex-col ">
-                <span className="text-[27px] font-semibold">Get in touch!</span>
-                <p>
-                  Let&apos;s build something amazing together! <br /> Drop me a
-                  message or contact me through email and I&apos;ll get back to
-                  you as soon as possible.
-                </p>
-              </div>
-            </div>
-            <div className="grid grid-cols-2  w-full gap-4  ">
-              {contact_links?.map((link, index) => {
-                return (
-                  <div
-                    className={`py-4 px-8 ${index === 0 || index + 1 === contact_links.length ? 'col-span-2' : ''}   rounded-xl bg-neutral flex items-center gap-4 overflow-hidden `}
-                    key={link?.identifier}
-                  >
-                    <SvgFinder
-                      identifier={link.identifier}
-                      size={32}
-                      className="fill-foreground "
-                    />
-                    <div className="flex flex-col text-[#777] font-medium ">
-                      <span className="text-base">{link?.name}</span>
-                      <span className="text-[13px] ">{link?.id}</span>
+    <section
+      id="contact"
+      className=" w-full   max-w-8xl  flex items-center justify-center self-center px-14  max-[1200px]:px-7"
+    >
+      <div
+        className={
+          'bg-indigo-800 relative rounded-xl p-20 [background-image:radial-gradient(88%_100%_at_top,rgba(255,255,255,0.5),rgba(255,255,255,0))] max-[1000px]:p-0 max-[1000px]:rounded-none max-[1000px]:bg-transparent w-full'
+        }
+      >
+        <NoiseTexture className="rounded-xl max-[1000px]:hidden" />
+        <div className="z-20 relative  shadow-lg max-[1000px]:shadow-none">
+          <div className="max-[1000px]:p-0 max-[1000px]:rounded-none p-8 max-md:p-0 w-full bg-background rounded-xl flex gap-20 max-[800px]:gap-10 max-md:flex-col-reverse   ">
+            <ContactForm />
+            <div className="w-1/2 max-[1050px]:w-full  justify-center  flex flex-col gap-8 max-md:gap-4 ">
+              <span className="text-[27px] font-semibold">Get in touch!</span>
+
+              <div className="grid grid-cols-2  w-full gap-4  ">
+                {contact_links?.map((link, index) => {
+                  return (
+                    <div
+                      className={`flex rounded-xl bg-neutral  gap-4 items-center justify-start py-4 px-8 max-[520px]:px-4  ${index === 0 || index + 1 === contact_links.length ? 'col-span-2' : 'col-span-1 max-[520px]:col-span-2 max-[1050px]:col-span-2 max-md:col-span-1 max-[1350px]:col-span-2'}    `}
+                      key={link?.identifier}
+                    >
+                      {/* className=
+                    {`flex items-center justify-start max-md:justify-start py-4 px-8 max-md:p-3   ${index === 0 || index + 1 === contact_links.length ? 'col-span-2 max-md:col-span-1 max-[500px]:col-span-4' : 'max-[1350px]:col-span-2 max-[1050px]:col-span-1 max-[500px]:col-span-4 '}   rounded-xl bg-neutral flex  items-center gap-4 overflow-hidden `}
+                    key={link?.identifier} */}
+                      <SvgFinder
+                        identifier={link.identifier}
+                        size={24}
+                        className="fill-foreground "
+                      />
+                      <div className="flex flex-col text-[#777] font-medium  ">
+                        <span className="text-base  ">{link?.name}</span>
+                        <span className="small   ">{link?.id}</span>
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
