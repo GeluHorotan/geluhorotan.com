@@ -26,7 +26,6 @@ interface IMobileHeader {
 
 export function MobileHeader({ buttons, socialButtons }: IMobileHeader) {
   const [isOpen, toggleSidebar] = useState(false);
-  console.log(socialButtons);
   return (
     <>
       <Drawer
@@ -61,7 +60,7 @@ export function MobileHeader({ buttons, socialButtons }: IMobileHeader) {
             <div className="flex flex-col w-full self-end h-[75%] justify-between items-start">
               <nav className=" w-full">
                 <ul className="text-5xl  w-full font-bold flex flex-col gap-8">
-                  {buttons?.map((button) => {
+                  {buttons?.map((button: INavigationButton) => {
                     return (
                       <Link
                         href={`/#${button?.to}`}
@@ -80,7 +79,7 @@ export function MobileHeader({ buttons, socialButtons }: IMobileHeader) {
           </DrawerHeader>
           <DrawerFooter className="self-start px-0">
             <div className="flex items-center justify-center gap-4 ">
-              {socialButtons?.map((button) => {
+              {socialButtons?.map((button: ISocialButton) => {
                 return (
                   button?.isSocial && (
                     <SvgFinder

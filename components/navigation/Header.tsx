@@ -5,7 +5,6 @@ import { MobileHeader } from '@components/navigation/MobileHeader';
 
 export function Header() {
   const { nav_buttons, nav_social_buttons } = nav_locale;
-  console.log(nav_social_buttons);
   return (
     <>
       <DesktopHeader buttons={nav_buttons}></DesktopHeader>

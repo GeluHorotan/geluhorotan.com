@@ -11,7 +11,7 @@ export function DesktopHeader({ buttons }: IDesktopHeader) {
       <div className="px-14  max-[1200px]:px-7 flex justify-between items-center  w-full mx-auto max-w-8xl">
         <h4 className="font-bold border-2">G</h4>
         <ul className="flex items-center gap-4 font-semibold">
-          {buttons?.map((button) => {
+          {buttons?.map((button: INavigationButton) => {
             return (
               <Link href={`/#${button.to}`} key={button?.id}>
                 <li className="uppercase">{button?.name}</li>
