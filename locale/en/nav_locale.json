@@ -17,7 +17,7 @@
       "isSocial": false,
       "name": "Email",
       "value": "geluhorotan@geluhorotan.com",
-      "id": 2,
+      "id": 4,
       "identifier": "mail",
       "to": ""
     },
@@ -26,7 +26,7 @@
 
       "name": "X",
       "value": "@oxymoron365",
-      "id": 3,
+      "id": 5,
       "identifier": "twitter",
       "to": ""
     },
@@ -36,7 +36,7 @@
 
       "name": "Github",
       "value": "@GeluHorotan",
-      "id": 5,
+      "id": 6,
       "identifier": "github",
       "to": ""
     },
@@ -45,7 +45,7 @@
 
       "name": "LinkedIn",
       "value": "/in/GeluHorotan",
-      "id": 4,
+      "id": 7,
       "identifier": "linkedin",
       "to": ""
     }
@@ -53,14 +53,14 @@
   "nav_legal_buttons": [
     {
       "name": "Terms and Conditions",
-      "id": 1,
+      "id": 8,
       "to": ""
     },
 
     {
       "name": "Privacy Policy",
       "to": "",
-      "id": 2
+      "id": 9
     }
   ]
 }
