@@ -1,10 +1,11 @@
 'use client';
-import { motion } from 'framer-motion';
 import { ThemeSwitcher } from '@components/ThemeSwitcher';
 import { Menu, X } from 'lucide-react';
 import SvgFinder from '@components/svgs/SvgFinder';
-import { itemAnimation } from '@animations/HeaderAnimations';
-import { IHeaderButtons } from '@customTypes/HeaderInterfaces';
+import {
+  ISocialButton,
+  INavigationButton,
+} from '@customTypes/NavigationInterfaces';
 import Link from 'next/link';
 import {
   Drawer,
@@ -19,12 +20,12 @@ import {
 import { useState } from 'react';
 
 interface IMobileHeader {
-  buttons: IHeaderButtons[];
+  buttons: INavigationButton[];
+  socialButtons: ISocialButton[];
 }
 
-export function MobileHeader({ buttons }: IMobileHeader) {
+export function MobileHeader({ buttons, socialButtons }: IMobileHeader) {
   const [isOpen, toggleSidebar] = useState(false);
-
   return (
     <>
       <Drawer
@@ -59,7 +60,7 @@ export function MobileHeader({ buttons }: IMobileHeader) {
             <div className="flex flex-col w-full self-end h-[75%] justify-between items-start">
               <nav className=" w-full">
                 <ul className="text-5xl  w-full font-bold flex flex-col gap-8">
-                  {buttons?.map((button) => {
+                  {buttons?.map((button: INavigationButton) => {
                     return (
                       <Link
                         href={`/#${button?.to}`}
@@ -78,27 +79,18 @@ export function MobileHeader({ buttons }: IMobileHeader) {
           </DrawerHeader>
           <DrawerFooter className="self-start px-0">
             <div className="flex items-center justify-center gap-4 ">
-              <motion.div variants={itemAnimation}>
-                <SvgFinder
-                  identifier="twitter"
-                  size={20}
-                  className="fill-foreground"
-                />
-              </motion.div>
-              <motion.div variants={itemAnimation}>
-                <SvgFinder
-                  size={20}
-                  identifier="linkedin"
-                  className="fill-foreground"
-                />
-              </motion.div>
-              <motion.div variants={itemAnimation}>
-                <SvgFinder
-                  size={20}
-                  identifier="github"
-                  className="fill-foreground"
-                />
-              </motion.div>
+              {socialButtons?.map((button: ISocialButton) => {
+                return (
+                  button?.isSocial && (
+                    <SvgFinder
+                      key={button?.id}
+                      identifier={button?.identifier}
+                      size={20}
+                      className="fill-foreground"
+                    />
+                  )
+                );
+              })}
             </div>
           </DrawerFooter>
         </DrawerContent>
