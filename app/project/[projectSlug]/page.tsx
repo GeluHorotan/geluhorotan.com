@@ -5,6 +5,7 @@ import { IQueryParams } from '@customTypes/ApiInterfaces';
 import { getProject } from '@data/getProject';
 import Image from 'next/image';
 import { MeshGradient } from '@components/svgs/MeshGradient';
+import { ProjectBody } from '@components/ProjectBody';
 
 export default async function Project({ params }: { params: IQueryParams }) {
   const { projectSlug } = params;
@@ -22,7 +23,7 @@ export default async function Project({ params }: { params: IQueryParams }) {
     >
       <div className="w-1/2  max-md:w-full max-[1500px]:w-[75%] flex flex-col gap-14">
         {/* Project desc */}
-        <div className="flex flex-col gap-4 items-center">
+        <div className="flex flex-col gap-4 items-center w-1/2 self-center">
           <Stage stage={stage} />
           <h4> {name}</h4>
           <p className="line-clamp-3 text-center">{description}</p>
@@ -46,7 +47,7 @@ export default async function Project({ params }: { params: IQueryParams }) {
         <Technologies technologies={technologies} />
         <Contributors contributors={contributors} />
 
-        <div>{body}</div>
+        <ProjectBody body={body} className="mt-6" />
       </div>
     </div>
   );
