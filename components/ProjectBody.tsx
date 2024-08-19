@@ -33,7 +33,7 @@ export function ProjectBody({ body, className }: IProjectBody) {
   };
 
   return (
-    <div className={cn('rich-text w-[75%] self-center', className)}>
+    <div className={cn('rich-text  self-center', className)}>
       {getParsedHTML(body)}
     </div>
   );

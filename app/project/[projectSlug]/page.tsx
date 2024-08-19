@@ -48,7 +48,7 @@ export default async function Project({ params }: { params: IQueryParams }) {
         <Technologies technologies={technologies} />
         <Contributors contributors={contributors} />
 
-        <ProjectBody body={body} className="mt-6 max-md:w-full" />
+        <ProjectBody body={body} className="mt-6 w-[75%] max-[900px]:w-full " />
       </div>
       <Contact />
     </div>

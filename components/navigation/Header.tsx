@@ -7,8 +7,11 @@ export function Header() {
   const { nav_buttons, nav_social_buttons } = nav_locale;
   return (
     <>
-      <DesktopHeader buttons={nav_buttons} />
-      <MobileHeader socialButtons={nav_social_buttons} buttons={nav_buttons} />
+      <DesktopHeader buttons={nav_buttons?.items} />
+      <MobileHeader
+        socialButtons={nav_social_buttons?.items}
+        buttons={nav_buttons?.items}
+      />
     </>
   );
 }
