@@ -27,6 +27,7 @@ export interface IProject {
   contributors: IContributor[];
   url: string;
   slug: string;
+  body?: string;
 }
 
 export interface IProjects {

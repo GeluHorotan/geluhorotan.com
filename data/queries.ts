@@ -27,10 +27,41 @@ export const GET_PROJECTS_QUERY = `
       }
       url
       slug
-
     }
   }
 `;
+
+export const GET_PROJECT_QUERY = ({ projectSlug }: { projectSlug: string }) => {
+  return `
+  query {
+    project(filter: { slug: { _eq: ${JSON.stringify(projectSlug)} } }) {
+      stage
+      image {
+        id
+      }
+      name
+      id
+      description
+      technologies {
+        technology_id {
+          id
+          name
+          identifier
+        }
+      }
+      contributors {
+        role
+        contributor_id {
+          id
+          name
+          avatar {id}
+        }
+      }
+      body
+    }
+  }
+`;
+};
 
 export const SUBMIT_CONTACT_FORM_QUERY = ({
   full_name,

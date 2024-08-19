@@ -6,7 +6,7 @@ export async function sendMessage({
   message,
 }: any) {
   try {
-    const res = await fetch('/api/message', {
+    const res = await fetch('http://localhost:3000/api/message', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
