@@ -19,6 +19,7 @@ export function Hero() {
             Typescript, Redux and Tailwind.css
           </p>
         </div>
+
         <div className="w-full flex gap-4 ">
           <Button className="max-md:w-1/2">PROJECTS</Button>
           <Button className="max-md:w-1/2" variant={'outline'}>
