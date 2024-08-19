@@ -10,7 +10,7 @@ export function Footer() {
   const { nav_buttons, nav_social_buttons, nav_legal_buttons } = nav_locale;
 
   return (
-    <div className="h-max px-14  max-md:py-10 max-[1200px]:px-7  py-20 mt-36 w-full max-w-8xl flex flex-col bg-background items-center  justify-center gap-10 ">
+    <div className="h-max px-14   max-[1200px]:px-7 pb-14 max-md:mt-14 mt-36 w-full max-w-8xl flex flex-col bg-background items-center  justify-center gap-10 ">
       <div className="w-full flex  max-[1000px]:flex-col max-[1000px]:gap-10 justify-between  items-start ">
         {/* Logo */}
         <h4 className="font-bold self-center text-[5rem] max-[1000px]:self-start  ">

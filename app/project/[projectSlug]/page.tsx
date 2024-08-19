@@ -6,6 +6,7 @@ import { getProject } from '@data/getProject';
 import Image from 'next/image';
 import { MeshGradient } from '@components/svgs/MeshGradient';
 import { ProjectBody } from '@components/ProjectBody';
+import { Contact } from '@components/Contact';
 
 export default async function Project({ params }: { params: IQueryParams }) {
   const { projectSlug } = params;
@@ -19,9 +20,9 @@ export default async function Project({ params }: { params: IQueryParams }) {
     project[0];
   return (
     <div
-      className={`mt-32  min-h-[calc(100svh-64px)]   w-full  flex flex-col  items-center  max-[1500px]:flex-col max-[1500px]:max-w-8xl  `}
+      className={`mt-32   min-h-[calc(100svh-64px)]   w-full  flex flex-col  gap-36 max-md:gap-20 items-center  max-[1500px]:flex-col max-[1500px]:max-w-8xl  `}
     >
-      <div className="w-1/2  max-md:w-full max-[1500px]:w-[75%] flex flex-col gap-14">
+      <div className="w-1/2 px-14  max-[1200px]:px-7   max-[900px]:w-full max-[1500px]:w-[75%] flex flex-col gap-14">
         {/* Project desc */}
         <div className="flex flex-col gap-4 items-center w-1/2 self-center">
           <Stage stage={stage} />
@@ -47,8 +48,9 @@ export default async function Project({ params }: { params: IQueryParams }) {
         <Technologies technologies={technologies} />
         <Contributors contributors={contributors} />
 
-        <ProjectBody body={body} className="mt-6" />
+        <ProjectBody body={body} className="mt-6 max-md:w-full" />
       </div>
+      <Contact />
     </div>
   );
 }

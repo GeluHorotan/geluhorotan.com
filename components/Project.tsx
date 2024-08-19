@@ -59,7 +59,7 @@ export function Project({ project, isReversed }: IProject) {
     <div
       className={` w-full  flex items-center gap-20 max-md:gap-9 max-[1500px]:flex-col max-[1500px]:max-w-8xl  ${styles.container[orientation]}`}
     >
-      <div className="w-1/2 max-md:w-full max-[1500px]:w-[75%]  h-full relative  ">
+      <div className="w-1/2 max-[900px]:w-full max-[1500px]:w-[75%]  h-full relative  ">
         <div
           className={`absolute  top-0 right-0 w-full h-full ${styles.imageContainer[orientation]} py-12`}
         >
@@ -74,8 +74,9 @@ export function Project({ project, isReversed }: IProject) {
 
         <MeshGradient className={styles.imageBorderRadius[orientation]} />
       </div>
+      {/* max-md:w-full */}
       <div
-        className={`w-1/2  max-md:w-full max-[1500px]:w-[75%] h-full   ${styles.infoContainer[orientation]} flex flex-col gap-14`}
+        className={`w-1/2 max-[900px]:w-full max-[1500px]:w-[75%] h-full   ${styles.infoContainer[orientation]} flex flex-col gap-14`}
       >
         <div className="flex flex-col gap-4">
           <Stage stage={stage} />
@@ -83,7 +84,7 @@ export function Project({ project, isReversed }: IProject) {
           <p className="line-clamp-3">{description}</p>
         </div>
         <Technologies technologies={technologies} />
-        <Contributors contributors={contributors}></Contributors>
+        <Contributors contributors={contributors} />
         <div className="w-1/2 max-md:w-full flex gap-4">
           <Link href={url} className="w-full" target="_blank">
             <Button className="w-full">VISIT</Button>
