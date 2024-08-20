@@ -1,16 +1,18 @@
-import SvgFinder from '@components/svgs/SvgFinder';
+// Locale
 import nav_locale from '@locale/en/nav_locale.json';
+import SvgFinder from '@components/svgs/SvgFinder';
 
-import { ContactForm } from '@components/ContactForm';
 import { NoiseTexture } from './NoiseTexture';
+
 import { ISocialButton } from '@customTypes/NavigationInterfaces';
+import { ContactForm } from '@components/ContactForm';
 
 export function Contact() {
   const { nav_social_buttons } = nav_locale;
   return (
     <section
       id="contact"
-      className=" w-full   max-w-8xl  flex items-center justify-center self-center px-14  max-[1200px]:px-7"
+      className="w-full   max-w-8xl  flex items-center justify-center self-center px-14  max-[1200px]:px-7"
     >
       <div
         className={

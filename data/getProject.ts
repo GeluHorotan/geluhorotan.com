@@ -12,7 +12,7 @@ export async function getProject({ projectSlug }: IQueryParams) {
     );
     const json = await res.json();
     const { project } = json;
-    return project as IProject[];
+    return project as IProject;
   } catch (error) {
     console.log(error);
   }
