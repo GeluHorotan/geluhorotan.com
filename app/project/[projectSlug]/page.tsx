@@ -32,7 +32,9 @@ export default async function Project({ params }: { params: IQueryParams }) {
 
         {/* Project Image */}
         <div className="w-full  h-full relative  ">
-          <div className={`absolute  top-0 right-0 w-full h-full  p-12`}>
+          <div
+            className={`absolute  top-0 right-0 w-full h-full  p-12 max-sm:p-6`}
+          >
             <Image
               src={`${process.env.ASSETS_URL}/${image.id}?key=optimised`}
               width={1980}
