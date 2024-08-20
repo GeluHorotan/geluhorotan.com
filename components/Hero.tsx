@@ -2,6 +2,7 @@
 import { FloatingPhone } from './FloatingPhone';
 import { Button } from '@components/ui/Button';
 import { FlipWords } from './aceternity-ui/FlipWords';
+import Link from 'next/link';
 
 export function Hero() {
   const words = ['scale', 'grow', 'adapt', 'expand'];
@@ -21,9 +22,12 @@ export function Hero() {
         </div>
 
         <div className="w-full flex gap-4 ">
-          <Button className="max-md:w-1/2">PROJECTS</Button>
+          <Button className="max-md:w-1/2">
+            <Link href="#projects">PROJECTS</Link>
+          </Button>
+
           <Button className="max-md:w-1/2" variant={'outline'}>
-            CONTACT
+            <Link href="#contact">CONTACT</Link>
           </Button>
         </div>
       </div>

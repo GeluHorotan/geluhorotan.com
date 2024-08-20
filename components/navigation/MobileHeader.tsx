@@ -18,6 +18,7 @@ import {
   DrawerTrigger,
 } from '@/components/ui/Drawer';
 import { useState } from 'react';
+import { Logo } from '@components/svgs/Logo';
 
 interface IMobileHeader {
   buttons: INavigationButton[];
@@ -36,7 +37,9 @@ export function MobileHeader({ buttons, socialButtons }: IMobileHeader) {
         direction="right"
       >
         <div className="z-50 h-16  top-0  w-full bg-background   items-center px-7  fixed justify-between max-md:flex hidden">
-          <h4 className="font-bold ">G</h4>
+          <Link href="/">
+            <Logo />
+          </Link>
 
           <div className="flex items-center gap-4 justify-center">
             <ThemeSwitcher />
