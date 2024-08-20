@@ -1,7 +1,8 @@
+// Utils
 import parse, { Element } from 'html-react-parser';
-import Image from 'next/image';
-import { AspectRatio } from '@components/ui/AspectRatio';
 import { cn } from '@lib/utils';
+
+import Image from 'next/image';
 
 interface IProjectBody {
   body: string;
