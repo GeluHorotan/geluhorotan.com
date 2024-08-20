@@ -1,12 +1,17 @@
 import { getProjects } from '@data/getProjects';
 import { Project } from '@components/Project';
 import { SectionTitle } from './SectionTitle';
+import { ErrorIllustration } from './svgs/ErrorIllustration';
 
 export async function Projects() {
-  const project = await getProjects();
-
+  let project = await getProjects();
+  project = null;
   if (!project) {
-    return <div>NOT FOUND</div>;
+    return (
+      <div className="max-w-8xl  self-center w-full">
+        <ErrorIllustration></ErrorIllustration>
+      </div>
+    );
   }
 
   return (
