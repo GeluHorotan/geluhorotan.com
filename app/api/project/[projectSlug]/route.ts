@@ -31,7 +31,7 @@ export async function GET(req: any, { params }: { params: IQueryParams }) {
       });
     });
 
-    return Response.json({ project }, { status: 200 });
+    return Response.json({ project: project[0] }, { status: 200 });
   } catch (error) {
     console.log(error);
     return Response.json({ error });

@@ -1,8 +1,11 @@
 import Image from 'next/image';
 import { MeshGradient } from '@components/svgs/MeshGradient';
+
+// UI Components
 import { Stage } from '@components/Stage';
 import { Technologies } from '@components/Technologies';
 import { Contributors } from '@components/Contributors';
+
 import { Button } from './ui/Button';
 import Link from 'next/link';
 

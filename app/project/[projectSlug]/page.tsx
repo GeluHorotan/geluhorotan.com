@@ -7,17 +7,18 @@ import Image from 'next/image';
 import { MeshGradient } from '@components/svgs/MeshGradient';
 import { ProjectBody } from '@components/ProjectBody';
 import { Contact } from '@components/Contact';
+import { ServerError } from '@components/ServerError';
 
 export default async function Project({ params }: { params: IQueryParams }) {
   const { projectSlug } = params;
-  const project = await getProject({ projectSlug });
+  let project = await getProject({ projectSlug });
 
   if (!project) {
-    return <div>Method didnt work.</div>;
+    return <ServerError className="h-[calc(100svh-64px)] border-2    mt-16" />;
   }
 
   const { image, stage, name, description, technologies, contributors, body } =
-    project[0];
+    project;
   return (
     <div
       className={`mt-32   min-h-[calc(100svh-64px)]   w-full  flex flex-col  gap-36 max-md:gap-20 items-center  max-[1500px]:flex-col max-[1500px]:max-w-8xl  `}

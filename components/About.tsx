@@ -1,15 +1,19 @@
+// Locale
 import about_locale from '@locale/en/about_locale.json';
+
 import SvgFinder from '@components/svgs/SvgFinder';
+
 import Image from 'next/image';
+
 import { NoiseBackground } from '@components/NoiseBackground';
-import { SectionTitle } from './SectionTitle';
+import { SectionTitle } from '@components/SectionTitle';
 
 export function About() {
   const { about_list } = about_locale;
   return (
     <section
       id="about"
-      className="w-full px-14  max-[1200px]:px-7 max-w-8xl  flex items-center justify-center text-5xl font-bold self-center  "
+      className="w-full px-14  max-[1200px]:px-7 max-w-8xl  flex items-center justify-center   self-center "
     >
       <div className="flex flex-col items-center justify-center gap-20 max-md:gap-14 w-full">
         <SectionTitle
@@ -31,7 +35,7 @@ export function About() {
                     size={24}
                   />
                 </div>
-                <h6>{item?.title}</h6>
+                <h6 className="font-semibold">{item?.title}</h6>
                 <p>{item?.desc}</p>
               </div>
             ))}
