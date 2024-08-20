@@ -13,6 +13,9 @@ const nextConfig = {
         hostname: 'api.microlink.io',
         protocol: 'https',
       },
+      {
+        hostname: 'localhost',
+      },
     ],
   },
 };

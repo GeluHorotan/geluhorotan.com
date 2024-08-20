@@ -92,7 +92,7 @@
     @apply text-[1.438rem] font-medium leading-normal max-md:text-[18px];
   }
   h6 {
-    @apply text-[1.188rem] leading-normal max-md:text-[16px];
+    @apply text-[1.188rem] font-normal leading-normal max-md:text-[16px];
   }
 
   p {
@@ -100,5 +100,15 @@
   }
   .small {
     @apply text-[0.813rem] leading-normal;
+  }
+
+  .rich-text {
+    @apply mb-0;
+  }
+  .rich-text h3 {
+    @apply mb-6  leading-7;
+  }
+  .rich-text p {
+    @apply mb-12  leading-7;
   }
 }

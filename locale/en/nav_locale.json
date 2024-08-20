@@ -1,66 +1,75 @@
 {
-  "nav_buttons": [
-    {
-      "name": "Home",
-      "id": 1,
-      "to": ""
-    },
-    { "name": "Projects", "to": "projects", "id": 2 },
-    {
-      "name": "Contact",
-      "to": "contact",
-      "id": 3
-    }
-  ],
-  "nav_social_buttons": [
-    {
-      "isSocial": false,
-      "name": "Email",
-      "value": "geluhorotan@geluhorotan.com",
-      "id": 4,
-      "identifier": "mail",
-      "to": ""
-    },
-    {
-      "isSocial": true,
+  "nav_buttons": {
+    "title": "Navigation",
+    "items": [
+      {
+        "name": "Home",
+        "id": 1,
+        "to": ""
+      },
+      { "name": "Projects", "to": "projects", "id": 2 },
+      {
+        "name": "Contact",
+        "to": "contact",
+        "id": 3
+      }
+    ]
+  },
+  "nav_social_buttons": {
+    "title": "Get in touch!",
+    "items": [
+      {
+        "isSocial": false,
+        "name": "Email",
+        "value": "geluhorotan@geluhorotan.com",
+        "id": 4,
+        "identifier": "mail",
+        "to": ""
+      },
+      {
+        "isSocial": true,
 
-      "name": "X",
-      "value": "@oxymoron365",
-      "id": 5,
-      "identifier": "twitter",
-      "to": ""
-    },
+        "name": "X",
+        "value": "@oxymoron365",
+        "id": 5,
+        "identifier": "twitter",
+        "to": ""
+      },
 
-    {
-      "isSocial": true,
+      {
+        "isSocial": true,
 
-      "name": "Github",
-      "value": "@GeluHorotan",
-      "id": 6,
-      "identifier": "github",
-      "to": ""
-    },
-    {
-      "isSocial": true,
+        "name": "Github",
+        "value": "@GeluHorotan",
+        "id": 6,
+        "identifier": "github",
+        "to": ""
+      },
+      {
+        "isSocial": true,
 
-      "name": "LinkedIn",
-      "value": "/in/GeluHorotan",
-      "id": 7,
-      "identifier": "linkedin",
-      "to": ""
-    }
-  ],
-  "nav_legal_buttons": [
-    {
-      "name": "Terms and Conditions",
-      "id": 8,
-      "to": ""
-    },
+        "name": "LinkedIn",
+        "value": "/in/GeluHorotan",
+        "id": 7,
+        "identifier": "linkedin",
+        "to": ""
+      }
+    ]
+  },
+  "nav_legal_buttons": {
+    "title": "Legal",
+    "items": [
+      {
+        "name": "Terms and Conditions",
+        "id": 8,
+        "to": ""
+      },
 
-    {
-      "name": "Privacy Policy",
-      "to": "",
-      "id": 9
-    }
-  ]
+      {
+        "name": "Privacy Policy",
+        "to": "",
+        "id": 9
+      }
+    ]
+  }
 }

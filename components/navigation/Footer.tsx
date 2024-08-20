@@ -10,7 +10,7 @@ export function Footer() {
   const { nav_buttons, nav_social_buttons, nav_legal_buttons } = nav_locale;
 
   return (
-    <div className="h-max px-14  max-md:py-10 max-[1200px]:px-7  py-20 mt-36 w-full max-w-8xl flex flex-col bg-background items-center  justify-center gap-10 ">
+    <div className="h-max px-14   max-[1200px]:px-7 pb-14 max-md:mt-14 mt-36 w-full max-w-8xl flex flex-col bg-background items-center  justify-center gap-10 ">
       <div className="w-full flex  max-[1000px]:flex-col max-[1000px]:gap-10 justify-between  items-start ">
         {/* Logo */}
         <h4 className="font-bold self-center text-[5rem] max-[1000px]:self-start  ">
@@ -18,14 +18,14 @@ export function Footer() {
         </h4>
         {/* Navigation */}
         <div className="flex gap-4 flex-col">
-          <p className="font-medium">NAVIGATION</p>
+          <p className="  font-semibold uppercase">{nav_buttons?.title}</p>
           <div className="flex items-start gap-2  flex-col">
-            {nav_buttons?.map((button: INavigationButton) => {
+            {nav_buttons?.items?.map((button: INavigationButton) => {
               return (
                 <Link
                   href={`/#${button?.to}`}
                   key={button?.id}
-                  className="uppercase"
+                  className="uppercase "
                 >
                   {button?.name}
                 </Link>
@@ -36,14 +36,14 @@ export function Footer() {
 
         {/* Legal */}
         <div className="flex gap-4 flex-col">
-          <p className="font-medium">LEGAL</p>
+          <p className=" font-semibold uppercase">{nav_legal_buttons?.title}</p>
           <div className="flex items-start gap-2  flex-col">
-            {nav_legal_buttons?.map((button: INavigationButton) => {
+            {nav_legal_buttons?.items?.map((button: INavigationButton) => {
               return (
                 <Link
                   href={`/#${button?.to}`}
                   key={button?.id}
-                  className="uppercase"
+                  className="uppercase "
                 >
                   {button?.name}
                 </Link>
@@ -54,11 +54,13 @@ export function Footer() {
 
         {/* Socials */}
         <div className="flex gap-4 flex-col">
-          <p className="font-medium">GET IN TOUCH</p>
+          <p className=" font-semibold uppercase">
+            {nav_social_buttons?.title}
+          </p>
           <div className="flex flex-col gap-4">
-            <div>{nav_social_buttons[0].value}</div>
+            <div>{nav_social_buttons?.items[0]?.value}</div>
             <div className="flex items-center gap-4 ">
-              {nav_social_buttons?.map(
+              {nav_social_buttons?.items?.map(
                 (button: ISocialButton) =>
                   button?.isSocial && (
                     <SvgFinder

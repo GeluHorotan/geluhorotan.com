@@ -6,7 +6,7 @@ interface ITechnology {
 }
 export function Technology({ name, identifier }: ITechnology) {
   return (
-    <div className="flex items-center gap-2 ">
+    <div className="flex items-center gap-2">
       <SvgFinder size={16} identifier={identifier} /> {name}
     </div>
   );
