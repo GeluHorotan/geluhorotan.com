@@ -24,10 +24,10 @@ export default async function Project({ params }: { params: IQueryParams }) {
     >
       <div className="w-1/2 px-14  max-[1200px]:px-7   max-[900px]:w-full max-[1500px]:w-[75%] flex flex-col gap-14">
         {/* Project desc */}
-        <div className="flex flex-col gap-4 items-center w-1/2 self-center">
+        <div className="flex flex-col gap-4 items-center w-full self-center">
           <Stage stage={stage} />
-          <h4> {name}</h4>
-          <p className="line-clamp-3 text-center">{description}</p>
+          <h1> {name}</h1>
+          <h6 className=" text-center">{description}</h6>
         </div>
 
         {/* Project Image */}
