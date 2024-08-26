@@ -31,7 +31,7 @@ export function ContactForm() {
       .required('You must enter a value.')
       .min(10, 'You must enter more than 10 characters.')
       .max(2000, 'You must enter less than 2000 characters.'),
-    consent: Yup.boolean().oneOf([true], 'This field is required!'),
+    useOfDataConsent: Yup.boolean().oneOf([true], 'This field is required!'),
   });
 
   return (
@@ -45,10 +45,10 @@ export function ContactForm() {
         phone: '',
         subject: '',
         message: '',
-        consent: false,
+        useOfDataConsent: false,
       }}
       onSubmit={async (
-        { full_name, email, phone, subject, message, consent },
+        { full_name, email, phone, subject, message, useOfDataConsent },
         { resetForm }
       ) => {
         await sendMessage({
@@ -57,13 +57,13 @@ export function ContactForm() {
           phone,
           subject,
           message,
-          consent,
+          useOfDataConsent,
         });
         resetForm();
       }}
     >
       {({
-        values: { full_name, email, phone, subject, message, consent },
+        values: { full_name, email, phone, subject, message, useOfDataConsent },
         errors,
         handleBlur,
         handleChange,
@@ -71,7 +71,7 @@ export function ContactForm() {
         <Form className="w-1/2 max-[1050px]:w-full flex flex-col items-start gap-4">
           <Field
             label="Full name"
-            placeholder="Gelu Horotan"
+            placeholder="John Doe"
             required
             id="full_name"
             name="full_name"
@@ -84,7 +84,7 @@ export function ContactForm() {
           />
           <Field
             label="Email"
-            placeholder="Gelu Horotan"
+            placeholder="john.doe@gmail.com"
             required
             id="email"
             name="email"
@@ -123,7 +123,7 @@ export function ContactForm() {
           />
           <Field
             label="Message"
-            placeholder="Gelu Horotan"
+            placeholder="Your thoughts here."
             required
             id="message"
             name="message"
@@ -134,14 +134,14 @@ export function ContactForm() {
             as={Textarea}
           />
           <Field
-            label="Consent"
+            label="useOfDataConsent"
             required
-            id="consent"
-            name="consent"
+            id="useOfDataConsent"
+            name="useOfDataConsent"
             onChange={handleChange}
             onBlur={handleBlur}
-            value={consent}
-            error={errors.consent}
+            value={useOfDataConsent}
+            error={errors.useOfDataConsent}
             as={Checkbox}
           >
             I agree that my personal information provided above may be used to
