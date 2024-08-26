@@ -3,13 +3,12 @@ import * as React from 'react';
 import { cn } from '@lib/utils';
 import { Label } from '@components/ui/Label';
 
-export interface InputProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {
+interface IInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label: string;
   error: string;
 }
 
-const Input = React.forwardRef<HTMLInputElement, InputProps>(
+const Input = React.forwardRef<HTMLInputElement, IInputProps>(
   ({ className, type, label, id, error, ...props }, ref) => {
     return (
       <div className="flex flex-col gap-3 w-full relative   ">
