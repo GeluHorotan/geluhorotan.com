@@ -1,10 +1,18 @@
+// Components
 import SvgFinder from '@components/svgs/SvgFinder';
+import { LegalWrapper } from '@components/LegalWrapper';
+import { PrivacyPolicy } from '@components/PrivacyPolicy';
+import { TermsAndConditions } from '@components/TermsAndConditions';
+import Link from 'next/link';
+
+// Types
 import {
   INavigationButton,
   ISocialButton,
 } from '@customTypes/NavigationInterfaces';
+
+// Locale
 import nav_locale from '@locale/en/nav_locale.json';
-import Link from 'next/link';
 
 export function Footer() {
   const { nav_buttons, nav_social_buttons, nav_legal_buttons } = nav_locale;
@@ -33,22 +41,18 @@ export function Footer() {
             })}
           </div>
         </div>
-
         {/* Legal */}
         <div className="flex gap-4 flex-col">
           <p className=" font-semibold uppercase">{nav_legal_buttons?.title}</p>
           <div className="flex items-start gap-2  flex-col">
-            {nav_legal_buttons?.items?.map((button: INavigationButton) => {
-              return (
-                <Link
-                  href={`/#${button?.to}`}
-                  key={button?.id}
-                  className="uppercase "
-                >
-                  {button?.name}
-                </Link>
-              );
-            })}
+            <LegalWrapper title="Privacy Policy">
+              {' '}
+              <PrivacyPolicy />
+            </LegalWrapper>
+            <LegalWrapper title="Terms and Conditions">
+              {' '}
+              <TermsAndConditions />
+            </LegalWrapper>
           </div>
         </div>
 

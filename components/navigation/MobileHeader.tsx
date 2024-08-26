@@ -16,7 +16,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from '@/components/ui/Drawer';
+} from '@components/ui/Drawer';
 import { useState } from 'react';
 import { Logo } from '@components/svgs/Logo';
 
