@@ -1,16 +1,27 @@
 'use client';
-import { sendMessage } from '@data/sendMessage';
-import { Input } from './ui/Input';
-import { Textarea } from './ui/Textarea';
-import { Button } from './ui/Button';
 
+// API
+import { sendMessage } from '@data/sendMessage';
+
+// UI
+import { Input } from '@components/ui/Input';
+import { Textarea } from '@components/ui/Textarea';
+import { Button } from '@components/ui/Button';
+
+// Formik and Yup
 import { Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
-import { Checkbox } from './ui/Checkbox';
-import { LegalWrapper } from './LegalWrapper';
-import { PrivacyPolicy } from './PrivacyPolicy';
+
+// Components
+import { Checkbox } from '@components/ui/Checkbox';
+import { LegalWrapper } from '@components/LegalWrapper';
+import { PrivacyPolicy } from '@components/PrivacyPolicy';
+
+import contact_form_locale from '@locale/en/contact_form_locale.json';
 
 export function ContactForm() {
+  const { button, useOfDataConsentText } = contact_form_locale;
+
   const sendMessageSchema = Yup.object().shape({
     full_name: Yup.string()
       .required('You must enter a value.')
@@ -144,16 +155,14 @@ export function ContactForm() {
             error={errors.useOfDataConsent}
             as={Checkbox}
           >
-            I agree that my personal information provided above may be used to
-            contact me regarding this inquiry. For further information, please
-            read our&nbsp;
+            {useOfDataConsentText}&nbsp;
             <LegalWrapper title="Privacy Policy" trigger="privacy policy.">
               <PrivacyPolicy />
             </LegalWrapper>
           </Field>
 
           <Button className="w-full" type="submit">
-            Send message
+            {button?.text}
           </Button>
         </Form>
       )}

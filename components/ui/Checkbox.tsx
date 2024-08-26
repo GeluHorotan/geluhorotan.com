@@ -6,10 +6,16 @@ import { Check } from 'lucide-react';
 
 import { cn } from '@lib/utils';
 
+interface ICheckbox
+  extends React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root> {
+  error: string;
+  children: React.ReactNode;
+}
+
 const Checkbox = React.forwardRef<
   React.ElementRef<typeof CheckboxPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
->(({ className, children, ...props }, ref) => (
+  ICheckbox
+>(({ className, children, error, ...props }, ref) => (
   <div className="flex  items-center gap-2">
     <CheckboxPrimitive.Root
       ref={ref}
