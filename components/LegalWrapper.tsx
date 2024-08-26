@@ -12,11 +12,12 @@ import {
 interface ILegalWrapper {
   children: React.ReactNode;
   title: string;
+  trigger: string;
 }
-export function LegalWrapper({ children, title }: ILegalWrapper) {
+export function LegalWrapper({ children, title, trigger }: ILegalWrapper) {
   return (
     <Dialog>
-      <DialogTrigger>{title}</DialogTrigger>
+      <DialogTrigger>{trigger}</DialogTrigger>
       <DialogContent className="h-[75%] w-[75%] max-md:w-[90%] ">
         <DialogHeader className="px-4 max-md:px-0">
           <DialogTitle>
@@ -24,7 +25,7 @@ export function LegalWrapper({ children, title }: ILegalWrapper) {
           </DialogTitle>
         </DialogHeader>
 
-        <DialogDescription className=" overflow-y-scroll max-md:px-0 ">
+        <DialogDescription className=" overflow-y-scroll px-4 max-md:px-0">
           {children}
         </DialogDescription>
         <DialogClose>

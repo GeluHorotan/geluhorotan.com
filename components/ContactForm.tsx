@@ -6,6 +6,9 @@ import { Button } from './ui/Button';
 
 import { Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
+import { Checkbox } from './ui/Checkbox';
+import { LegalWrapper } from './LegalWrapper';
+import { PrivacyPolicy } from './PrivacyPolicy';
 
 export function ContactForm() {
   const sendMessageSchema = Yup.object().shape({
@@ -28,6 +31,7 @@ export function ContactForm() {
       .required('You must enter a value.')
       .min(10, 'You must enter more than 10 characters.')
       .max(2000, 'You must enter less than 2000 characters.'),
+    consent: Yup.boolean().oneOf([true], 'This field is required!'),
   });
 
   return (
@@ -41,17 +45,25 @@ export function ContactForm() {
         phone: '',
         subject: '',
         message: '',
+        consent: false,
       }}
       onSubmit={async (
-        { full_name, email, phone, subject, message },
+        { full_name, email, phone, subject, message, consent },
         { resetForm }
       ) => {
-        await sendMessage({ full_name, email, phone, subject, message });
+        await sendMessage({
+          full_name,
+          email,
+          phone,
+          subject,
+          message,
+          consent,
+        });
         resetForm();
       }}
     >
       {({
-        values: { full_name, email, phone, subject, message },
+        values: { full_name, email, phone, subject, message, consent },
         errors,
         handleBlur,
         handleChange,
@@ -121,6 +133,24 @@ export function ContactForm() {
             error={errors.message}
             as={Textarea}
           />
+          <Field
+            label="Consent"
+            required
+            id="consent"
+            name="consent"
+            onChange={handleChange}
+            onBlur={handleBlur}
+            value={consent}
+            error={errors.consent}
+            as={Checkbox}
+          >
+            I agree that my personal information provided above may be used to
+            contact me regarding this inquiry. For further information, please
+            read our&nbsp;
+            <LegalWrapper title="Privacy Policy" trigger="privacy policy.">
+              <PrivacyPolicy />
+            </LegalWrapper>
+          </Field>
 
           <Button className="w-full" type="submit">
             Send message
