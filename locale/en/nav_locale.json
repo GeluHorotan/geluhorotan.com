@@ -61,6 +61,7 @@
     "items": [
       {
         "name": "Terms and Conditions",
+        "body": "",
         "id": 8,
         "to": ""
       },
@@ -71,5 +72,6 @@
         "id": 9
       }
     ]
-  }
+  },
+  "rights": "All rights reserved."
 }

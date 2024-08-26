@@ -1,21 +1,31 @@
+// Components
 import SvgFinder from '@components/svgs/SvgFinder';
+import { LegalWrapper } from '@components/LegalWrapper';
+import { PrivacyPolicy } from '@components/PrivacyPolicy';
+import { TermsAndConditions } from '@components/TermsAndConditions';
+import Link from 'next/link';
+
+// Types
 import {
   INavigationButton,
   ISocialButton,
 } from '@customTypes/NavigationInterfaces';
+
+// Locale
 import nav_locale from '@locale/en/nav_locale.json';
-import Link from 'next/link';
+import { Logo } from '@components/svgs/Logo';
 
 export function Footer() {
-  const { nav_buttons, nav_social_buttons, nav_legal_buttons } = nav_locale;
+  const { nav_buttons, nav_social_buttons, nav_legal_buttons, rights } =
+    nav_locale;
 
   return (
-    <div className="h-max px-14   max-[1200px]:px-7 pb-14 max-md:mt-14 mt-36 w-full max-w-8xl flex flex-col bg-background items-center  justify-center gap-10 ">
+    <div className="h-max px-14   max-[1200px]:px-7 pb-14 max-md:mt-14 mt-36 w-full max-w-8xl flex flex-col bg-background items-center  justify-center gap-20 max-md:gap-10 ">
       <div className="w-full flex  max-[1000px]:flex-col max-[1000px]:gap-10 justify-between  items-start ">
         {/* Logo */}
-        <h4 className="font-bold self-center text-[5rem] max-[1000px]:self-start  ">
-          G
-        </h4>
+        <Link href="/">
+          <Logo size={128} />
+        </Link>
         {/* Navigation */}
         <div className="flex gap-4 flex-col">
           <p className="  font-semibold uppercase">{nav_buttons?.title}</p>
@@ -33,22 +43,21 @@ export function Footer() {
             })}
           </div>
         </div>
-
         {/* Legal */}
         <div className="flex gap-4 flex-col">
           <p className=" font-semibold uppercase">{nav_legal_buttons?.title}</p>
           <div className="flex items-start gap-2  flex-col">
-            {nav_legal_buttons?.items?.map((button: INavigationButton) => {
-              return (
-                <Link
-                  href={`/#${button?.to}`}
-                  key={button?.id}
-                  className="uppercase "
-                >
-                  {button?.name}
-                </Link>
-              );
-            })}
+            <LegalWrapper title="Privacy Policy" trigger="Privacy Policy">
+              {' '}
+              <PrivacyPolicy />
+            </LegalWrapper>
+            <LegalWrapper
+              title="Terms and Conditions"
+              trigger="Terms and Conditions"
+            >
+              {' '}
+              <TermsAndConditions />
+            </LegalWrapper>
           </div>
         </div>
 
@@ -77,7 +86,7 @@ export function Footer() {
       </div>
 
       <div className="max-[1000px]:justify-start w-full flex justify-center">
-        {new Date().getFullYear()} &#169; All rights reserved.{' '}
+        {new Date().getFullYear()} &#169; {rights}
       </div>
     </div>
   );

@@ -1,13 +1,27 @@
 'use client';
-import { sendMessage } from '@data/sendMessage';
-import { Input } from './ui/Input';
-import { Textarea } from './ui/Textarea';
-import { Button } from './ui/Button';
 
+// API
+import { sendMessage } from '@data/sendMessage';
+
+// UI
+import { Input } from '@components/ui/Input';
+import { Textarea } from '@components/ui/Textarea';
+import { Button } from '@components/ui/Button';
+
+// Formik and Yup
 import { Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
 
+// Components
+import { Checkbox } from '@components/ui/Checkbox';
+import { LegalWrapper } from '@components/LegalWrapper';
+import { PrivacyPolicy } from '@components/PrivacyPolicy';
+
+import contact_form_locale from '@locale/en/contact_form_locale.json';
+
 export function ContactForm() {
+  const { button, useOfDataConsentText } = contact_form_locale;
+
   const sendMessageSchema = Yup.object().shape({
     full_name: Yup.string()
       .required('You must enter a value.')
@@ -28,6 +42,7 @@ export function ContactForm() {
       .required('You must enter a value.')
       .min(10, 'You must enter more than 10 characters.')
       .max(2000, 'You must enter less than 2000 characters.'),
+    useOfDataConsent: Yup.boolean().oneOf([true], 'This field is required!'),
   });
 
   return (
@@ -41,17 +56,25 @@ export function ContactForm() {
         phone: '',
         subject: '',
         message: '',
+        useOfDataConsent: false,
       }}
       onSubmit={async (
-        { full_name, email, phone, subject, message },
+        { full_name, email, phone, subject, message, useOfDataConsent },
         { resetForm }
       ) => {
-        await sendMessage({ full_name, email, phone, subject, message });
+        await sendMessage({
+          full_name,
+          email,
+          phone,
+          subject,
+          message,
+          useOfDataConsent,
+        });
         resetForm();
       }}
     >
       {({
-        values: { full_name, email, phone, subject, message },
+        values: { full_name, email, phone, subject, message, useOfDataConsent },
         errors,
         handleBlur,
         handleChange,
@@ -59,7 +82,7 @@ export function ContactForm() {
         <Form className="w-1/2 max-[1050px]:w-full flex flex-col items-start gap-4">
           <Field
             label="Full name"
-            placeholder="Gelu Horotan"
+            placeholder="John Doe"
             required
             id="full_name"
             name="full_name"
@@ -72,7 +95,7 @@ export function ContactForm() {
           />
           <Field
             label="Email"
-            placeholder="Gelu Horotan"
+            placeholder="john.doe@gmail.com"
             required
             id="email"
             name="email"
@@ -111,7 +134,7 @@ export function ContactForm() {
           />
           <Field
             label="Message"
-            placeholder="Gelu Horotan"
+            placeholder="Your thoughts here."
             required
             id="message"
             name="message"
@@ -121,9 +144,25 @@ export function ContactForm() {
             error={errors.message}
             as={Textarea}
           />
+          <Field
+            label="useOfDataConsent"
+            required
+            id="useOfDataConsent"
+            name="useOfDataConsent"
+            onChange={handleChange}
+            onBlur={handleBlur}
+            value={useOfDataConsent}
+            error={errors.useOfDataConsent}
+            as={Checkbox}
+          >
+            {useOfDataConsentText}&nbsp;
+            <LegalWrapper title="Privacy Policy" trigger="privacy policy.">
+              <PrivacyPolicy />
+            </LegalWrapper>
+          </Field>
 
           <Button className="w-full" type="submit">
-            Send message
+            {button?.text}
           </Button>
         </Form>
       )}
