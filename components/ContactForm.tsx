@@ -75,7 +75,7 @@ export function ContactForm() {
     >
       {({
         values: { full_name, email, phone, subject, message, useOfDataConsent },
-        values,
+
         errors,
         handleBlur,
         handleChange,
@@ -95,7 +95,6 @@ export function ContactForm() {
             error={errors.full_name}
             as={Input}
           />
-          {console.log(values)}
           <Field
             label="Email"
             placeholder="john.doe@gmail.com"

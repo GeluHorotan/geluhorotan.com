@@ -7,7 +7,10 @@ import { Check } from 'lucide-react';
 import { cn } from '@lib/utils';
 
 interface ICheckbox
-  extends React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root> {
+  extends Omit<
+    React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>,
+    'value'
+  > {
   error: string;
   children: React.ReactNode;
   name: string;
