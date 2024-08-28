@@ -14,9 +14,9 @@ const config: Config = {
         '8xl': '87.5rem',
       },
       colors: {
-        released: 'var(--color-released)',
-        mvp: 'var(--color-mvp)',
-        development: 'var(--color-development)',
+        red: 'var(--color-red)',
+        blue: 'var(--color-blue)',
+        green: 'var(--color-green)',
         neutral: 'var(--color-neutral)',
 
         // Theme
@@ -27,31 +27,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [
-    // nextui({
-    //   themes: {
-    //     dark: {
-    //       colors: {
-    //         background: '#1A1D21',
-    //         foreground: '#F7F3F4',
-    //         primary: {
-    //           DEFAULT: '#578EF8',
-    //           foreground: '#1A1D21',
-    //         },
-    //       },
-    //     },
-    //     light: {
-    //       colors: {
-    //         background: '#F7F3F4',
-    //         foreground: '#1A1D21',
-    //         primary: {
-    //           DEFAULT: '#125AE1',
-    //           foreground: '#F7F3F4',
-    //         },
-    //       },
-    //     },
-    //   },
-    // }),
-  ],
+  plugins: [],
 };
 export default config;

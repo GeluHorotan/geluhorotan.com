@@ -4,6 +4,7 @@ export async function sendMessage({
   phone,
   subject,
   message,
+  useOfDataConsent,
 }: any) {
   try {
     const res = await fetch('http://localhost:3000/api/message', {
@@ -11,7 +12,14 @@ export async function sendMessage({
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ full_name, email, phone, subject, message }),
+      body: JSON.stringify({
+        full_name,
+        email,
+        phone,
+        subject,
+        message,
+        useOfDataConsent,
+      }),
     });
     const json = await res.json();
     return json;

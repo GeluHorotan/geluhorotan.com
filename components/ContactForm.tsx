@@ -75,9 +75,11 @@ export function ContactForm() {
     >
       {({
         values: { full_name, email, phone, subject, message, useOfDataConsent },
+        values,
         errors,
         handleBlur,
         handleChange,
+        setFieldValue,
       }) => (
         <Form className="w-1/2 max-[1050px]:w-full flex flex-col items-start gap-4">
           <Field
@@ -93,6 +95,7 @@ export function ContactForm() {
             error={errors.full_name}
             as={Input}
           />
+          {console.log(values)}
           <Field
             label="Email"
             placeholder="john.doe@gmail.com"
@@ -149,8 +152,7 @@ export function ContactForm() {
             required
             id="useOfDataConsent"
             name="useOfDataConsent"
-            onChange={handleChange}
-            onBlur={handleBlur}
+            setFieldValue={setFieldValue}
             value={useOfDataConsent}
             error={errors.useOfDataConsent}
             as={Checkbox}

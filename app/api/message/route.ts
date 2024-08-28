@@ -8,9 +8,16 @@ export async function POST(req: any) {
   }
   const body = await req.json();
 
-  const { full_name, email, phone, subject, message } = body;
+  const { full_name, email, phone, subject, message, useOfDataConsent } = body;
 
-  if (!full_name || !email || !phone || !subject || !message) {
+  if (
+    !full_name ||
+    !email ||
+    !phone ||
+    !subject ||
+    !message ||
+    useOfDataConsent === false
+  ) {
     return Response.json(
       { message: 'Missing required fields' },
       { status: 400 }

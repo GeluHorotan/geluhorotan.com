@@ -55,18 +55,18 @@
 
 @layer base {
   :root[data-theme~='light'] {
-    --color-released: #f20c3a;
-    --color-mvp: #0c68f2;
-    --color-development: #0cf249;
+    --color-red: #f20c3a;
+    --color-blue: #0c68f2;
+    --color-green: #0cf249;
     --color-neutral: #ebe7e8;
     --color-background: #f7f3f4;
     --color-foreground: #1a1d21;
     --color-primary: #125ae1;
   }
   :root[data-theme~='dark'] {
-    --color-released: #f85778;
-    --color-mvp: #5797f8;
-    --color-development: #57f882;
+    --color-red: #f85778;
+    --color-blue: #5797f8;
+    --color-green: #57f882;
     --color-neutral: #24282e;
     --color-background: #1a1d21;
     --color-foreground: #f7f3f4;

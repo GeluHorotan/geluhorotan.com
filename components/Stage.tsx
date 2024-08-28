@@ -17,13 +17,13 @@ export function Stage({ stage }: IStage) {
 
   const stageStyles: any = {
     circle: {
-      released: 'bg-released',
-      mvp: 'bg-mvp',
+      released: 'bg-red',
+      mvp: 'bg-blue',
       development: 'bg-development',
     },
     text: {
-      released: 'text-released',
-      mvp: 'text-mvp',
+      released: 'text-red',
+      mvp: 'text-blue',
       development: 'text-development',
     },
   };

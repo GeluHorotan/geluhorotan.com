@@ -69,10 +69,11 @@ export const SUBMIT_CONTACT_FORM_QUERY = ({
   phone,
   message,
   subject,
+  useOfDataConsent,
 }: IContactFormParams) => {
   return `
     mutation {
-      create_message_item(data: { full_name: "${full_name}", email: "${email}", phone: "${phone}", subject: "${subject}", message: "${message}" }) {
+      create_message_item(data: { full_name: "${full_name}", email: "${email}", phone: "${phone}", subject: "${subject}", message: "${message}", useOfDataConsent: ${useOfDataConsent} }) {
         full_name
         email
         phone

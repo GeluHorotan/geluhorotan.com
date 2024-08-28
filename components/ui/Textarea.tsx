@@ -15,7 +15,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
       <div className="flex flex-col gap-3 w-full relative  ">
         <div className="flex flex-col gap-1">
           <Label htmlFor={id}>{label}</Label>
-          <div className="small text-red-400 !font-light  ">{error}</div>
+          <div className="small text-red !font-light  ">{error}</div>
         </div>
         <textarea
           className={cn(
