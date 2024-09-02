@@ -57,6 +57,7 @@ export const GET_PROJECT_QUERY = ({ projectSlug }: { projectSlug: string }) => {
           avatar {id}
         }
       }
+      slug
       body
     }
   }
@@ -83,3 +84,13 @@ export const SUBMIT_CONTACT_FORM_QUERY = ({
     }
   `;
 };
+
+export const GET_PROJECTS_INFO_QUERY = `
+  query {
+    project(sort: ["-date_created"]) {
+      name
+      description
+      slug
+    }
+  }
+`;
