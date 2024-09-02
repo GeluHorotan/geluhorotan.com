@@ -8,6 +8,15 @@ import { MeshGradient } from '@components/svgs/MeshGradient';
 import { ProjectBody } from '@components/ProjectBody';
 import { Contact } from '@components/Contact';
 import { ServerError } from '@components/ServerError';
+import { getProjectsInfo } from '@data/getProjectsInfo';
+
+export const generateStaticParams = async () => {
+  const data = await getProjectsInfo();
+  let params: any = [];
+
+  data?.forEach((project) => params.push({ projectSlug: project?.slug }));
+  return params;
+};
 
 export default async function Project({ params }: { params: IQueryParams }) {
   const { projectSlug } = params;

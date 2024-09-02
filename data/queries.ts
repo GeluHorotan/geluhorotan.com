@@ -83,3 +83,13 @@ export const SUBMIT_CONTACT_FORM_QUERY = ({
     }
   `;
 };
+
+export const GET_PROJECTS_INFO_QUERY = `
+  query {
+    project(sort: ["-date_created"]) {
+      name
+      description
+      slug
+    }
+  }
+`;
