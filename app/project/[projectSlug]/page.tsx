@@ -9,6 +9,33 @@ import { ProjectBody } from '@components/ProjectBody';
 import { Contact } from '@components/Contact';
 import { ServerError } from '@components/ServerError';
 import { getProjectsInfo } from '@data/getProjectsInfo';
+import { siteConfig } from '@config/Site';
+import { IMetadataParams } from '@customTypes/Metadata';
+
+export const generateMetadata = async ({ params }: IMetadataParams) => {
+  const { projectSlug } = params;
+  const project = await getProject({ projectSlug });
+
+  return {
+    title: project?.name,
+    description: project?.description,
+    openGraph: {
+      title: project?.name,
+      description: project?.description,
+      url: process.env.SITE_URL,
+      siteName: siteConfig.siteName,
+      images: [
+        {
+          url: `${process.env.ASSETS_URL}/${project?.image?.id}`,
+          width: 1280,
+          height: 628,
+        },
+      ],
+      locale: siteConfig.locale,
+      type: siteConfig.type,
+    },
+  };
+};
 
 export const generateStaticParams = async () => {
   const data = await getProjectsInfo();

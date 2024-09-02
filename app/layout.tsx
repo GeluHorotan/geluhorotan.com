@@ -16,25 +16,28 @@ const poppins = Poppins({
 export const generateMetadata = async () => {
   return {
     title: {
-      template: `${siteConfig.siteName} | %s`,
-      default: siteConfig.siteName,
+      template: `${siteConfig.siteTitle} | %s`,
+      default: siteConfig.siteTitle,
     },
     description: siteConfig.description,
-    // TO DO Opengraph
-    // openGraph: {
-    //   title: siteConfig.siteName,
-    //   description: siteConfig.description,
-    //   url: process.env.NEXT_PUBLIC_SITE_URL,
-    //   siteName: siteConfig.siteName,
-    //   images: [
-    //     {
-    //       url: '',
-    //       width: '',
-    //       height: '',
-    //     },
-    //   ],
-    //   type: 'website',
-    // },
+    openGraph: {
+      title: {
+        template: `${siteConfig.siteTitle} | %s`,
+        default: siteConfig.siteTitle,
+      },
+      description: siteConfig.description,
+      url: process.env.SITE_URL,
+      siteName: siteConfig.siteName,
+      images: [
+        {
+          url: `${process.env.SITE_URL}/opengraph-image.png`,
+          width: 1280,
+          height: 628,
+        },
+      ],
+      locale: siteConfig.locale,
+      type: siteConfig.type,
+    },
   };
 };
 

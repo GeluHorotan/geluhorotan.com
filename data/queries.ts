@@ -57,6 +57,7 @@ export const GET_PROJECT_QUERY = ({ projectSlug }: { projectSlug: string }) => {
           avatar {id}
         }
       }
+      slug
       body
     }
   }
