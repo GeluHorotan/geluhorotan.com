@@ -9,8 +9,9 @@ import { IProject } from '@customTypes/ProjectInterfaces';
 
 export async function Projects() {
   let projects = await getProjects();
+
   if (!projects) {
-    return <ServerError />;
+    return <ServerError id="projects" />;
   }
 
   return (

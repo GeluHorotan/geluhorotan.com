@@ -9,7 +9,7 @@ import { Moon } from '@components/svgs/MoonIcon';
 
 export function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
@@ -19,7 +19,7 @@ export function ThemeSwitcher() {
 
   return (
     <div className=" flex items-center justify-center">
-      {theme === 'dark' ? (
+      {resolvedTheme === 'dark' ? (
         <button onClick={() => setTheme('light')}>
           <Sun className="fill-foreground" />
         </button>
