@@ -10,7 +10,7 @@ const nextConfig = {
         pathname: '/assets/*',
       },
       {
-        hostname: 'https://geluhorotan-directus.koyeb.app',
+        hostname: 'geluhorotan-directus.koyeb.app',
         protocol: 'https',
         pathname: '/assets/*',
       },
