@@ -7,7 +7,7 @@ export async function sendMessage({
   useOfDataConsent,
 }: any) {
   try {
-    const res = await fetch('http://localhost:3000/api/message', {
+    const res = await fetch(`${process.env.API_URL2}/api/message`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

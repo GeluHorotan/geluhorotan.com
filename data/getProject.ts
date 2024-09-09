@@ -4,7 +4,7 @@ import { IProject } from '@customTypes/ProjectInterfaces';
 export async function getProject({ projectSlug }: IQueryParams) {
   try {
     const res = await fetch(
-      `http://localhost:3000/api/project/${projectSlug}`,
+      `${process.env.API_URL2}/api/project/${projectSlug}`,
       {
         method: 'GET',
         cache: 'no-cache',
