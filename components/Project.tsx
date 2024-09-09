@@ -67,7 +67,7 @@ export function Project({ project, isReversed }: IProject) {
           className={`absolute  top-0 right-0 w-full h-full ${styles.imageContainer[orientation]} py-12`}
         >
           <Image
-            src={`${process.env.ASSETS_URL}/${image.id}?key=optimised`}
+            src={`${process.env.ASSETS_URL}/${image?.id}?key=optimised`}
             width={1980}
             height={1024}
             alt="test"

@@ -13,7 +13,7 @@ export function Technologies({ technologies, center }: ITechnologies) {
       <div
         className={`flex gap-4 flex-wrap items-center ${center && 'justify-center'} `}
       >
-        {technologies.map((tech: ITechnology) => {
+        {technologies?.map((tech: ITechnology) => {
           return (
             <Technology
               name={tech.name}
