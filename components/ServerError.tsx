@@ -5,12 +5,14 @@ interface IServerError {
   heading?: string;
   subHeading?: string;
   className?: string;
+  id?: string;
 }
 
 export function ServerError({
   heading = 'Something went wrong!',
   subHeading = 'Please try again later!',
   className,
+  ...rest
 }: IServerError) {
   return (
     <section
@@ -18,6 +20,7 @@ export function ServerError({
         'flex-col gap-4 flex px-14 max-[1200px]:px-7 w-full max-w-8xl self-center items-center justify-center',
         className
       )}
+      {...rest}
     >
       <div className="flex flex-col items-center">
         <h2 className="text-primary text-center">{heading}</h2>
