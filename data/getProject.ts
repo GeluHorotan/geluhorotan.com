@@ -7,7 +7,7 @@ export async function getProject({ projectSlug }: IQueryParams) {
       `${process.env.API_URL2}/api/project/${projectSlug}`,
       {
         method: 'GET',
-        cache: 'no-cache',
+        cache: 'default',
       }
     );
     const json = await res.json();

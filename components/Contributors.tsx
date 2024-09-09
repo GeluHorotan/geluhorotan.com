@@ -9,7 +9,7 @@ export function Contributors({ contributors }: IContributors) {
     <div className="flex flex-col gap-4  w-full ">
       <span className="font-semibold">CONTRIBUTORS</span>
       <div className="flex gap-8 flex-wrap ">
-        {contributors.map((contributor: IContributor) => {
+        {contributors?.map((contributor: IContributor) => {
           return (
             <Contributor
               name={contributor?.name}
