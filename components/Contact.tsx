@@ -6,6 +6,7 @@ import { NoiseTexture } from './NoiseTexture';
 
 import { ISocialButton } from '@customTypes/NavigationInterfaces';
 import { ContactForm } from '@components/ContactForm';
+import Link from 'next/link';
 
 export function Contact() {
   const { nav_social_buttons } = nav_locale;
@@ -32,20 +33,21 @@ export function Contact() {
                 {nav_social_buttons?.items?.map(
                   (button: ISocialButton, index: number) => {
                     return (
-                      <div
-                        className={`flex rounded-xl bg-neutral  gap-4 items-center justify-start py-4 px-8 max-[520px]:px-4  ${index === 0 || index + 1 === nav_social_buttons?.items?.length ? 'col-span-2' : 'col-span-1 max-[520px]:col-span-2 max-[1050px]:col-span-2 max-md:col-span-1 max-[1350px]:col-span-2'}    `}
+                      <Link
+                        href={button?.to}
+                        className={`ease-in-out  flex hover:bg-primary fill-foreground text-[#777] hover:text-background hover:fill-background transition-all duration-200 rounded-xl bg-neutral  gap-4 items-center justify-start py-4 px-8 max-[520px]:px-4  ${index === 0 || index + 1 === nav_social_buttons?.items?.length ? 'col-span-2' : 'col-span-1 max-[520px]:col-span-2 max-[1050px]:col-span-2 max-md:col-span-1 max-[1350px]:col-span-2'}    `}
                         key={button?.id}
                       >
                         <SvgFinder
                           identifier={button?.identifier}
                           size={24}
-                          className="fill-foreground"
+                          className=""
                         />
-                        <div className="flex flex-col text-[#777] font-medium  ">
+                        <div className="flex flex-col  font-medium  ">
                           <span className="text-base  ">{button?.name}</span>
                           <span className="small   ">{button?.value}</span>
                         </div>
-                      </div>
+                      </Link>
                     );
                   }
                 )}

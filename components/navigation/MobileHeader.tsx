@@ -67,7 +67,7 @@ export function MobileHeader({ buttons, socialButtons }: IMobileHeader) {
                     return (
                       <Link
                         href={`/#${button?.to}`}
-                        className=" w-max"
+                        className=" w-max transition-all duration-200 ease-in-out hover:text-primary"
                         key={button?.id}
                       >
                         <DrawerClose className=" flex items-start ">

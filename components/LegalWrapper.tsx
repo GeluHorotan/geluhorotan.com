@@ -17,11 +17,13 @@ interface ILegalWrapper {
 export function LegalWrapper({ children, title, trigger }: ILegalWrapper) {
   return (
     <Dialog>
-      <DialogTrigger>{trigger}</DialogTrigger>
+      <DialogTrigger className="transition-all duration-200 hover:text-primary ease-in-out ">
+        {trigger}
+      </DialogTrigger>
       <DialogContent className="h-[75%] w-[75%] max-md:w-[90%] ">
-        <DialogHeader className="px-4 max-md:px-0">
+        <DialogHeader className="px-4 max-md:px-0 ">
           <DialogTitle>
-            <h3>{title}</h3>
+            <h3 className="">{title}</h3>
           </DialogTitle>
         </DialogHeader>
 

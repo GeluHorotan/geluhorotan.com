@@ -33,7 +33,7 @@
         "value": "@oxymoron365",
         "id": 5,
         "identifier": "twitter",
-        "to": ""
+        "to": "https://x.com/oxymoron365"
       },
 
       {
@@ -43,7 +43,7 @@
         "value": "@GeluHorotan",
         "id": 6,
         "identifier": "github",
-        "to": ""
+        "to": "https://github.com/GeluHorotan"
       },
       {
         "isSocial": true,
@@ -52,7 +52,7 @@
         "value": "/in/GeluHorotan",
         "id": 7,
         "identifier": "linkedin",
-        "to": ""
+        "to": "https://www.linkedin.com/in/gelu-horotan/"
       }
     ]
   },

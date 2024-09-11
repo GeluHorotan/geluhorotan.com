@@ -21,11 +21,11 @@ export function ThemeSwitcher() {
     <div className=" flex items-center justify-center">
       {resolvedTheme === 'dark' ? (
         <button onClick={() => setTheme('light')}>
-          <Sun className="fill-foreground" />
+          <Sun className="transition-all duration-200 hover:fill-primary fill-foreground ease-in-out " />
         </button>
       ) : (
         <button onClick={() => setTheme('dark')}>
-          <Moon className="fill-foreground" />
+          <Moon className="transition-all duration-200 hover:fill-primary fill-foreground  ease-in-out " />
         </button>
       )}
     </div>

@@ -16,7 +16,11 @@ export function DesktopHeader({ buttons }: IDesktopHeader) {
         <ul className="flex items-center gap-4 font-semibold">
           {buttons?.map((button: INavigationButton) => {
             return (
-              <Link href={`/#${button.to}`} key={button?.id}>
+              <Link
+                href={`/#${button.to}`}
+                key={button?.id}
+                className="transition-all duration-200 hover:text-primary ease-in-out "
+              >
                 <li className="uppercase">{button?.name}</li>
               </Link>
             );

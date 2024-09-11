@@ -35,7 +35,7 @@ export function Footer() {
                 <Link
                   href={`/#${button?.to}`}
                   key={button?.id}
-                  className="uppercase "
+                  className="uppercase transition-all duration-200 hover:text-primary ease-in-out "
                 >
                   {button?.name}
                 </Link>
@@ -72,12 +72,14 @@ export function Footer() {
               {nav_social_buttons?.items?.map(
                 (button: ISocialButton) =>
                   button?.isSocial && (
-                    <SvgFinder
+                    <Link
                       key={button?.id}
-                      identifier={button?.identifier}
-                      size={20}
-                      className={`fill-foreground `}
-                    />
+                      target="_blank"
+                      href={button?.to}
+                      className="fill-foreground  hover:fill-primary transition-all duration-200 ease-in-out "
+                    >
+                      <SvgFinder identifier={button?.identifier} size={20} />
+                    </Link>
                   )
               )}
             </div>

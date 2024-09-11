@@ -10,19 +10,19 @@
     {
       "identifier": "linkedin",
       "name": "LinkedIn",
-      "to": "/",
+      "to": "https://www.linkedin.com/in/gelu-horotan/",
       "id": "/in/GeluHorotan"
     },
     {
       "identifier": "github",
       "name": "GitHub",
-      "to": "/",
+      "to": "https://github.com/GeluHorotan",
       "id": "@GeluHorotan"
     },
     {
       "identifier": "twitter",
       "name": "Twitter",
-      "to": "/",
+      "to": "https://x.com/oxymoron365",
       "id": "@oxymoron365"
     }
   ]
