@@ -2,6 +2,8 @@ import { NextResponse, NextRequest } from 'next/server';
 import { revalidatePath } from 'next/cache';
 import { headers } from 'next/headers';
 
+export const runtime = 'edge';
+
 export async function POST(req: NextRequest) {
   if (req.method !== 'POST') {
     return Response.json({ message: 'Method not allowed!' }, { status: 405 });
