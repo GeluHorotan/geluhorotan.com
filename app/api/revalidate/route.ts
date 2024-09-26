@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
   if (!authorization || authorization !== process.env.ADMIN_TOKEN) {
     return NextResponse.json({ error: 'Not authorized!' }, { status: 401 });
   }
-  revalidatePath(`/`);
-  revalidatePath(`/project/[projectSlug]`);
+  revalidatePath('/', 'layout');
+  // revalidatePath(`/project/[projectSlug]`);
   return NextResponse.json({ revalidated: true, now: Date.now() });
 }
