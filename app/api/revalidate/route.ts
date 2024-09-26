@@ -1,9 +1,14 @@
 import { NextResponse, NextRequest } from 'next/server';
 import { revalidatePath } from 'next/cache';
-export async function GET(request: NextRequest) {
-  const token = request.nextUrl.searchParams.get('token');
+import { headers } from 'next/headers';
 
-  if (!token || token !== process.env.ADMIN_TOKEN) {
+export async function POST(req: NextRequest) {
+  if (req.method !== 'POST') {
+    return Response.json({ message: 'Method not allowed!' }, { status: 405 });
+  }
+  const authorization = headers().get('authorization');
+
+  if (!authorization || authorization !== process.env.ADMIN_TOKEN) {
     return NextResponse.json({ error: 'Not authorized!' }, { status: 401 });
   }
   revalidatePath(`/`);
