@@ -11,7 +11,7 @@ export function Hero() {
     <section className="w-full h-[calc(100svh-64px)] max-md:mb-20 mt-16 flex items-center justify-center gap-80 text-5xl font-bold max-w-8xl max-[1200px]:gap-20 max-[1200px]:px-7 max-md:flex-col-reverse max-md:gap-10 ">
       <div className="w-1/2 max-[900px]:w-full   flex flex-col gap-14">
         <div className="flex flex-col gap-8 max-md:text-center">
-          <h1>Build scalable web applications</h1>
+          <h1>Building scalable web applications</h1>
           <p>
             As a frontend developer, I specialised in building apps that are
             efficient and scales, with latest technologies like React,Next.js,
