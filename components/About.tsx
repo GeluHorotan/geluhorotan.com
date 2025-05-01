@@ -4,12 +4,11 @@ import about_locale from '@locale/en/about_locale.json';
 import SvgFinder from '@components/svgs/SvgFinder';
 
 import Image from 'next/image';
-
-import { NoiseBackground } from '@components/NoiseBackground';
 import { SectionTitle } from '@components/SectionTitle';
 
 export function About() {
   const { about_list } = about_locale;
+
   return (
     <section
       id="about"
@@ -42,13 +41,11 @@ export function About() {
           </div>
           <div className=" w-1/2 max-[900px]:w-full   flex items-center justify-end ">
             <Image
-              src={
-                'https://api.microlink.io/?url=https%3A%2F%2Fripple-motion.vercel.app&overlay.browser=light&overlay.background=linear-gradient%28225deg%2C+%23FF057C+0%25%2C+%238D0B93+50%25%2C+%23321575+100%25%29&screenshot=true&embed=screenshot.url'
-              }
-              alt="The Sinners Project"
+              src={`https://api.microlink.io/?url=https%3A%2F%2Fripplefit.co.uk&overlay.browser=light&overlay.background=linear-gradient%28225deg%2C+%23FF057C+0%25%2C+%238D0B93+50%25%2C+%23321575+100%25%29&screenshot=true&embed=screenshot.url`}
+              alt="Rehab Sports Therapy Project"
               width={1280}
               height={720}
-              className=" rounded-xl w-full h-full"
+              className="rounded-xl w-full h-full"
             />
           </div>
         </div>

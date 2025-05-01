@@ -3,12 +3,12 @@
   "about_list": [
     {
       "title": "Real-World Applications",
-      "desc": "Emphasizing user-centric design, my experience entails crafting applications tailored to various user demographics, prioritizing both performance and accessibility.",
+      "desc": "I build responsive, user-friendly web apps with a focus on fast-loading performance and accessibility, ensuring every user gets a seamless experience.",
       "identifier": "grid"
     },
     {
       "title": "Embracing Complex Challenges",
-      "desc": "Embracing challenges as opportunities for growth and innovation, I tackle complex problems by applying strategic thinking and creativity, overcoming obstacles along the way.",
+      "desc": "I solve complex problems with modern JavaScript frameworks like React and Next.js, delivering API-integrated web apps with creative, scalable solutions.",
       "identifier": "bulb"
     }
   ]
